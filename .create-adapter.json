@@ -1,0 +1,38 @@
+{
+    "cli": true,
+    "adapterName": "speedport",
+    "title": "Speedport",
+    "description": "Fetches data from Telekom Speedport Router",
+    "keywords": [
+        "speedport telekom"
+    ],
+    "expert": "yes",
+    "features": [
+        "adapter"
+    ],
+    "adminFeatures": [],
+    "type": "infrastructure",
+    "startMode": "daemon",
+    "connectionType": "local",
+    "dataSource": "poll",
+    "connectionIndicator": "yes",
+    "language": "JavaScript",
+    "adminReact": "no",
+    "tools": [
+        "ESLint",
+        "type checking",
+        "devcontainer"
+    ],
+    "indentation": "Space (4)",
+    "quotes": "double",
+    "es6class": "yes",
+    "authorName": "hacki11",
+    "authorGithub": "hacki11",
+    "authorEmail": "jur.schmid@gmail.com",
+    "gitRemoteProtocol": "SSH",
+    "gitCommit": "yes",
+    "license": "MIT License",
+    "ci": "gh-actions",
+    "dependabot": "yes",
+    "creatorVersion": "1.32.0"
+}

@@ -1,0 +1,98 @@
+{
+    "common": {
+        "name": "speedport",
+        "version": "0.0.1",
+        "news": {
+            "0.0.1": {
+                "en": "initial release",
+                "de": "Erstveröffentlichung",
+                "ru": "Начальная версия",
+                "pt": "lançamento inicial",
+                "nl": "Eerste uitgave",
+                "fr": "Première version",
+                "it": "Versione iniziale",
+                "es": "Versión inicial",
+                "pl": "Pierwsze wydanie",
+                "zh-cn": "首次出版"
+            }
+        },
+        "title": "Speedport",
+        "titleLang": {
+            "en": "Speedport",
+            "de": "Speedport",
+            "ru": "Speedport",
+            "pt": "Speedport",
+            "nl": "Speedport",
+            "fr": "Speedport",
+            "it": "Speedport",
+            "es": "Speedport",
+            "pl": "Speedport",
+            "zh-cn": "赛车场"
+        },
+        "desc": {
+            "en": "Fetches data from Telekom Speedport Router",
+            "de": "Ruft Daten vom Telekom Speedport Router ab",
+            "ru": "Получает данные из Telekom Speedport Router",
+            "pt": "Coleta dados do Telekom Speedport Router",
+            "nl": "Haalt gegevens op van Telekom Speedport Router",
+            "fr": "Récupère les données du routeur Telekom Speedport",
+            "it": "Recupera i dati da Telekom Speedport Router",
+            "es": "Obtiene datos del enrutador Telekom Speedport",
+            "pl": "Pobiera dane z routera Telekom Speedport",
+            "zh-cn": "从Telekom Speedport Router获取数据"
+        },
+        "authors": [
+            "hacki11 <jur.schmid@gmail.com>"
+        ],
+        "keywords": [
+            "speedport telekom"
+        ],
+        "license": "MIT",
+        "platform": "Javascript/Node.js",
+        "main": "main.js",
+        "icon": "speedport.png",
+        "enabled": true,
+        "extIcon": "https://raw.githubusercontent.com/hacki11/ioBroker.speedport/master/admin/speedport.png",
+        "readme": "https://github.com/hacki11/ioBroker.speedport/blob/master/README.md",
+        "loglevel": "info",
+        "mode": "daemon",
+        "type": "infrastructure",
+        "compact": true,
+        "connectionType": "local",
+        "dataSource": "poll",
+        "materialize": true,
+        "dependencies": [
+            {
+                "js-controller": ">=2.0.0"
+            }
+        ]
+    },
+    "native": {
+        "option1": true,
+        "option2": "42"
+    },
+    "objects": [],
+    "instanceObjects": [
+        {
+            "_id": "info",
+            "type": "channel",
+            "common": {
+                "name": "Information"
+            },
+            "native": {}
+        },
+        {
+            "_id": "info.connection",
+            "type": "state",
+            "common": {
+                "role": "indicator.connected",
+                "name": "Device or service connected",
+                "type": "boolean",
+                "read": true,
+                "write": false,
+                "def": false
+            },
+            "native": {}
+        }
+    ]
+}
