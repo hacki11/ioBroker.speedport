@@ -1,0 +1,220 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<script language="JavaScript" src="routine_data.js"></script>
+<script language="JavaScript">
+
+var gui_rd_ver = 0;
+var _httoken = 1492564255;
+
+var i;
+var Description=new Array(8);
+var VPI=new Array(8);
+var VCI=new Array(8);
+var Encapsulation=new Array(8);
+var Protocol=new Array(8);
+var ProtocolVar=new Array(8);
+var ATMVCIfno=new Array(8);
+var Default_route=new Array(8);
+var VLAN=new Array(8);
+
+var interface_name = "ptm0";
+var inte_face_mac = "94:6A:B0:FF:AA:BB";
+var inte_face_status = "idle";
+var inte_face_wantype = "2";
+var inte_face_media = "VDSL";
+var inte_face_DSLusDR = 0;
+var inte_face_DSLdsDR = 108822;
+var inte_face_mtu = 1500;
+var max_interface = 1;
+var interface_data_rx = 4;
+var interface_data_tx = 4;
+var inte_face_proto = [];
+var inte_face_ip = [];
+var inte_face_subnet = [];
+var inte_face_p2p = [];
+var inte_face_rx = [];
+var inte_face_tx = [];
+var inte_face_collisions = [];
+var interface_6_ready = "0";
+var interface_6_ip = "";
+var interface_6_prefix_length = 0;
+var interface_6_valid_lifetime = 86400;
+var interface_6_preferred_lifetime = 7200;
+var interface_6_mtu = 1500;
+var inte_face_gw_ip4 = '';
+var inte_face_gw_ip6 = '--';
+var wan_dhcpc_lease = '--';
+var interface_6_ip_lla='--';
+var interface_6_ip_ula='--';
+var interface_6_ip_lla='fe80::966a:b0ff:fe17:a234';
+inte_face_proto[0] = "llc"
+inte_face_ip[0] = "0.0.0.0"
+inte_face_subnet[0] = "0.0.0.0"
+inte_face_p2p[0] = "0.0.0.0"
+inte_face_rx[0] = [];
+inte_face_tx[0] = [];
+inte_face_rx[0][0] = 138616563;
+inte_face_tx[0][0] = 0;
+inte_face_rx[0][1] = 2147483647;
+inte_face_tx[0][1] = 0;
+inte_face_rx[0][2] = 0;
+inte_face_tx[0][2] = 0;
+inte_face_rx[0][3] = 0;
+inte_face_tx[0][3] = 0;
+inte_face_collisions[0] = 0;
+
+
+function evaltF()
+{
+	document.tF.changemtu.value = 0;
+	return true;
+}
+
+function rescan() {
+	location.href = "interfaces_hidden_wan.stm";
+	return false;
+}
+
+</script>
+</script>
+<link rel="stylesheet" type="text/css" media="screen" href="my_function3.css">
+</head>
+<body onload="clear1()">
+<form name="tF" METHOD=POST ACTION="/cgi-bin/setup_hidden_interface_wan.cgi">
+<input type="hidden" name="changemtu" value="0">
+<table width="90%" border="0" cellspacing="1" cellpadding="5">
+	<tr>
+	    <td>
+            <p class=subtitle>WAN Interface</p>
+            </p>
+		</td>
+	</tr>
+
+	<tr>
+		<td>
+			<table border="0" cellspacing="1" cellpadding="5" width=100%>
+				<tr>
+				    <td class=tdTitle>Interface</td>
+				    <td class=tdTitle>Physical address</td>
+				    <td class=tdTitle>Status</td>
+				    <td class=tdTitle>Media</td>
+				    <td class=tdTitle>Speed</td>
+				    <td class=tdTitle>MTU</td>
+				    <td class=tdTitle>IPv4 Leasetime</td>
+				    <td class=tdTitle>IPv6 address</td>
+				    <td class=tdTitle>IPv6 prefix-length</td>
+				    <td class=tdTitle>IPv6 valid lifetime</td>
+				    <td class=tdTitle>IPv6 preferred lifetime</td>
+				    <td class=tdTitle>IPv6 MTU</td>
+				    <td class=tdTitle>Next Hop(Gateway)</td>
+				</tr>
+				<script language="javascript">
+					document.write('<tr>');
+					document.write('<td class=tdText>WAN</td>');
+					document.write('<td class=tdText>'+inte_face_mac+'</td>');
+					document.write('<td class=tdText>'+inte_face_status+'</td>');
+					document.write('<td class=tdText>'+inte_face_media+'</td>');
+					if (inte_face_wantype == 0 || inte_face_wantype == 2)
+						document.write('<td class=tdText>US:'+inte_face_DSLusDR+' Kbps<br>DS:'+inte_face_DSLdsDR+' Kbps</td>');
+					else if (inte_face_wantype == 1)
+						document.write('<td class=tdText>US:'+inte_face_ETHusDR+' Kbps<br>DS:'+inte_face_ETHdsDR+' Kbps</td>');
+
+					document.write('<td class=tdText>'+inte_face_mtu+'</td>');
+					document.write('<td class=tdText>DHCP: '+wan_dhcpc_lease+'</td>');
+					if(interface_6_ready)
+					{
+
+						document.write('<td class=tdText>GUA:'+interface_6_ip+'<br>LLA:'+interface_6_ip_lla+'</td>');
+						document.write('<td class=tdText>'+interface_6_prefix_length+'</td>');
+						document.write('<td class=tdText>'+interface_6_valid_lifetime+'</td>');
+						document.write('<td class=tdText>'+interface_6_preferred_lifetime+'</td>');
+						document.write('<td class=tdText>'+interface_6_mtu+'</td>');
+					}
+					else
+					{
+						document.write('<td class=tdText>--</td>');
+						document.write('<td class=tdText>--</td>');
+						document.write('<td class=tdText>--</td>');
+						document.write('<td class=tdText>--</td>');
+						document.write('<td class=tdText>--</td>');
+					}
+					document.write('<td class=tdText>IPv4:'+inte_face_gw_ip4+'<br>IPv6:'+inte_face_gw_ip6+'</td>');
+
+					document.write('</tr>');
+				</script>
+			</table>
+		</td>
+	</tr>
+
+	<tr>
+	    <td>
+            <p class=normalText>
+				The page gives the per interface statistics on the WAN side.
+            </p>
+		</td>
+	</tr>
+
+	<tr>
+		<td>
+			<table border="0" cellspacing="1" cellpadding="5" width=100%>
+				<tr>
+				    <td class=tdTitle rowspan=2>Interface</td>
+				    <td class=tdTitle nowrap rowspan=2>Connection Type</td>
+				    <td class=tdTitle nowrap rowspan=2>IP Address</td>
+				    <td class=tdTitle nowrap rowspan=2>Subnet Mask</td>
+				    <td class=tdTitlec colspan=4>TX</td>
+				    <td class=tdTitlec colspan=4>RX</td>
+				    <td class=tdTitle nowrap rowspan=2>Collisions</td>
+				</tr>
+				<tr>
+				    <td class=tdTitle>Packets</td>
+				    <td class=tdTitle>Bytes</td>
+				    <td class=tdTitle>Errors</td>
+				    <td class=tdTitle>Dropped</td>
+				    <td class=tdTitle>Packets</td>
+				    <td class=tdTitle>Bytes</td>
+				    <td class=tdTitle>Errors</td>
+				    <td class=tdTitle>Dropped</td>
+				</tr>
+				<script language="javascript">
+				for (i = 0 ; i < max_interface ; i++) {
+					document.write('<tr>');
+					document.write('<td class=tdText>'+interface_name+'</td>');
+					document.write('<td class=tdText nowrap >'+inte_face_proto[i]+'</td>');
+					document.write('<td class=tdText nowrap >'+inte_face_ip[i]+'</td>');
+					document.write('<td class=tdText nowrap >255.255.255.255</td>');
+					for (x=0; x<interface_data_tx; x++)
+					{
+						document.write('<td class=tdText>'+inte_face_tx[i][x]+'</td>');
+					}
+					for (y=0; y<interface_data_rx; y++)
+					{
+						document.write('<td class=tdText>'+inte_face_rx[i][y]+'</td>');
+					}
+					document.write('<td class=tdText nowrap >'+inte_face_collisions[i]+'</td>');
+					document.write('</tr>');
+				}
+				</script>
+			</table>
+		</td>
+	</tr>
+	<tr>
+		<td class="mainmsgR">
+
+			<input type="button" class="formsbuttonref" value="Refresh" name="RescanCh" onClick="rescan();">
+			<script lanugage="javascript">
+			if (gui_rd_ver)
+			{
+				document.write('<input type="submit" class="formsbutton" name="resetWAN" value="Reset WAN Statistics" onClick="return evaltF();">');
+      		}
+			</script>
+		</td>
+	</tr>
+</table>
+</form>
+<script language="JavaScript">
+process_doc();
+</script>
+</body>
+</html>

@@ -1,0 +1,239 @@
+<html>
+<head>
+<title></title>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<script language="JavaScript" src="routine_data.js"></script>
+<script language="JavaScript">
+
+var inte_face_mac = "94:6A:B0:19:AA:BB";
+var inte_face_ip4 = "169.254.2.1";
+var inte_face_mask4 = "255.255.0.0";
+var inte_face_status = "Up";
+var inte_face_media = "Ethernet";
+var inte_face_mtu = 1500;
+var inte_face_6valid = "--";
+var inte_face_6preferred = "--";
+var inte_face_6address = "--";
+var inte_face_6prefix_length = "--";
+var inte_face_6mtu = "--";
+var inte_face_gw_ip4 = '';
+var inte_face_gw_ip6 = '--';
+var inte_face_6addr_lla='--';
+var inte_face_6addr_ula='--';
+var max_interface = 4;
+var interface_data_rx = 4;
+var interface_data_tx = 4;
+var inte_face_rx = [];
+var inte_face_tx = [];
+var inte_face_speed = [];
+var inte_face_linkStatus = [];
+var inte_face_collisions = [];
+inte_face_linkStatus[0] = 1;
+inte_face_speed[0] = 1000;
+inte_face_rx[0] = [];
+inte_face_tx[0] = [];
+inte_face_rx[0][0] = 149760;
+inte_face_tx[0][0] = 33714;
+inte_face_rx[0][1] = 11212809;
+inte_face_tx[0][1] = 30413494;
+inte_face_rx[0][2] = 0;
+inte_face_tx[0][2] = 0;
+inte_face_rx[0][3] = 0;
+inte_face_tx[0][3] = 0;
+inte_face_collisions[0] = 0;
+inte_face_linkStatus[1] = 2;
+inte_face_speed[1] = 10;
+inte_face_rx[1] = [];
+inte_face_tx[1] = [];
+inte_face_rx[1][0] = 0;
+inte_face_tx[1][0] = 0;
+inte_face_rx[1][1] = 0;
+inte_face_tx[1][1] = 0;
+inte_face_rx[1][2] = 0;
+inte_face_tx[1][2] = 0;
+inte_face_rx[1][3] = 0;
+inte_face_tx[1][3] = 0;
+inte_face_collisions[1] = 0;
+inte_face_linkStatus[2] = 2;
+inte_face_speed[2] = 10;
+inte_face_rx[2] = [];
+inte_face_tx[2] = [];
+inte_face_rx[2][0] = 0;
+inte_face_tx[2][0] = 0;
+inte_face_rx[2][1] = 0;
+inte_face_tx[2][1] = 0;
+inte_face_rx[2][2] = 0;
+inte_face_tx[2][2] = 0;
+inte_face_rx[2][3] = 0;
+inte_face_tx[2][3] = 0;
+inte_face_collisions[2] = 0;
+inte_face_linkStatus[3] = 1;
+inte_face_speed[3] = 1000;
+inte_face_rx[3] = [];
+inte_face_tx[3] = [];
+inte_face_rx[3][0] = 26980020;
+inte_face_tx[3][0] = 109112153;
+inte_face_rx[3][1] = 758401045;
+inte_face_tx[3][1] = 697547296;
+inte_face_rx[3][2] = 2;
+inte_face_tx[3][2] = 0;
+inte_face_rx[3][3] = 0;
+inte_face_tx[3][3] = 0;
+inte_face_collisions[3] = 0;
+
+var gui_rd_ver = 0;
+var _httoken = 1656430843;
+
+
+function evaltF()
+{
+	document.tF.changemtu.value = 0;
+	return true;
+}
+
+function change_mtu()
+{
+  	if(isNValidNum(document.tF.lan_mtu.value)||(document.tF.lan_mtu.value>1500)||(document.tF.lan_mtu.value<576)){
+  		alert('Invalid value in the field of MTU! (576-1500)');
+		return false;
+	}
+	document.tF.changemtu.value = 1;
+	return true;
+}
+
+function rescan() {
+	location.href = "interfaces_hidden_lan.stm";
+	return false;
+}
+
+</script>
+<link rel="stylesheet" type="text/css" media="screen" href="my_function3.css">
+</head>
+<body onload="clear1()">
+<form name="tF" METHOD=POST ACTION="/cgi-bin/setup_hidden_interface_lan.cgi">
+<input type="hidden" name="changemtu" value="0">
+<table width="90%" border="0" cellspacing="1" cellpadding="5">
+	<tr>
+	    <td>
+            <p class=subtitle>LAN Interface</p>
+            </p>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<table border="0" cellspacing="1" cellpadding="5" width=100%>
+				<tr>
+				    <td class=tdTitle>Interface</td>
+				    <td class=tdTitle>Physical address</td>
+				    <td class=tdTitle>Status</td>
+				    <td class=tdTitle>IPv4 address</td>
+				    <td class=tdTitle>Mask</td>
+				    <td class=tdTitle>Media</td>
+				    <td class=tdTitle>MTU</td>
+				    <td class=tdTitle>IPv4 Leasetime</td>
+				    <td class=tdTitle>IPv6 address</td>
+				    <td class=tdTitle>IPv6 prefix-length</td>
+				    <td class=tdTitle>IPv6 valid lifetime</td>
+				    <td class=tdTitle>IPv6 preferred lifetime</td>
+				    <td class=tdTitle>IPv6 MTU</td>
+				    <td class=tdTitle>Next Hop(Gateway)</td>
+				</tr>
+				<script language="javascript">
+					document.write('<tr>');
+					document.write('<td class=tdText>LAN</td>');
+					document.write('<td class=tdText>'+inte_face_mac+'</td>');
+					document.write('<td class=tdText>'+inte_face_status+'</td>');
+					document.write('<td class=tdText>'+inte_face_ip4+'</td>');
+					document.write('<td class=tdText>'+inte_face_mask4+'</td>');
+					document.write('<td class=tdText>'+inte_face_media+'</td>');
+					if (gui_rd_ver)
+					{
+						document.write('<td class=tdTextReWr><input type="text" class="textbox" name="lan_mtu" size=4 maxlength=4 value='+inte_face_mtu+'>');
+						document.write('<input type="submit" class="formsbutton" name="change" value="Save" onClick="return change_mtu();"></td>');
+					}
+					else
+					{
+						document.write('<td class=tdText>'+inte_face_mtu+'</td>');
+					}
+					document.write('<td class=tdText>Forever</td>');
+					document.write('<td class=tdText>GUA:'+inte_face_6address+'<br>LLA:'+inte_face_6addr_lla+'<br>ULA:'+inte_face_6addr_ula+'</td>');
+					document.write('<td class=tdText>'+inte_face_6prefix_length+'</td>');
+					document.write('<td class=tdText>'+inte_face_6valid+'</td>');
+					document.write('<td class=tdText>'+inte_face_6preferred+'</td>');
+					document.write('<td class=tdText>'+inte_face_6mtu+'</td>');
+					document.write('<td class=tdText>IPv4:'+inte_face_gw_ip4+'<br>IPv6:'+inte_face_gw_ip6+'</td>');
+					document.write('</tr>');
+				</script>
+			</table>
+		</td>
+	</tr>
+
+	<tr>
+        <td>
+            <p class=normalText>The page gives the per interface statistics on the LAN side:</p>
+		</td>
+	</tr>
+
+	<tr>
+		<td>
+			<table border="0" cellspacing="1" cellpadding="5" width="100%">
+				<tr>
+					<td class=tdTitle width="10%" rowspan="2">Interface</td>
+					<td class=tdTitle width="5%" rowspan="2">Link Speed</td>
+					<td class=tdTitlec width="40%" colspan="4">TX</td>
+					<td class=tdTitlec width="40%" colspan="4">RX</td>
+					<td class=tdTitle width="5%" rowspan="2">Collisions</td>
+				</tr>
+				<tr>
+					<td class=tdTitle width="10%">Packets</td>
+					<td class=tdTitle width="10%">Bytes</td>
+					<td class=tdTitle width="10%">Errors</td>
+					<td class=tdTitle width="10%">Dropped</td>
+					<td class=tdTitle width="10%">Packets</td>
+					<td class=tdTitle width="10%">Bytes</td>
+					<td class=tdTitle width="10%">Errors</td>
+					<td class=tdTitle width="10%">Dropped</td>
+				</tr>
+				<SCRIPT LANGUAGE="JavaScript">
+					for (i=0; i<max_interface; i++)
+					{
+						document.write('<tr>')
+						document.write('<td class=tdText width="10%">'+"LAN"+(i+1)+'</td>');
+						if (inte_face_linkStatus[i] == 1)
+							document.write('<td class=tdText width="5%">'+inte_face_speed[i]+'M</td>');
+						else
+							document.write('<td class=tdText width="5%">--</td>');
+						for (x=0; x<interface_data_tx; x++)
+						{
+							document.write('<td class=tdText width="10%">'+inte_face_tx[i][x]+'</td>');
+						}
+						for (y=0; y<interface_data_rx; y++)
+						{
+							document.write('<td class=tdText width="10%">'+inte_face_rx[i][y]+'</td>');
+						}
+						document.write('<td class=tdText width="5%">'+inte_face_collisions[i]+'</td>');
+						document.write('</tr>')
+					}
+				</SCRIPT>
+			</table>
+         </td>
+	</tr>
+	<tr>
+		<td class="mainmsgR">
+
+            <input type="button" class="formsbuttonref" value="Refresh" name="RescanCh" onClick="rescan();">
+		<script lanugage="javascript">
+		if (gui_rd_ver)
+		{
+			document.write('<input type="submit" class="formsbutton" name="savesetting" value="Reset LAN Statistics" onClick="return evaltF();">');
+            	}
+		</script>
+		</td>
+	</tr>
+</table>
+</form>
+<script language="JavaScript">
+process_doc();
+</script>
+</body>
+</html>

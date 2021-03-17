@@ -1,0 +1,46 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<script language="JavaScript" src="routine_data.js"></script>
+<script lanugage="javascript">
+//
+function rescan() {
+	location.href = "mem_cpu_utilization.stm";
+	return false;
+}
+</script>
+<link rel="stylesheet" type="text/css" media="screen" href="my_function3.css">
+</head>
+<body onload="clear1()">
+<form name="tF" action="" method="POST">
+<a NAME="top">
+<table width="90%" border="0" cellspacing="1" cellpadding="5">
+	<tr>
+		<td>
+			<p class="subtitle">Memory/CPU utilization</p>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<p class="normalTextb"></p>
+			<p class="normalText">
+				<table width="600" border=0 cellspacing="2" cellpadding="5" class="infosys"><tr><td class=tdTitle width="200">Available Main Memory</td><td class=tdText width="400">408724 kB</td></tr><tr><td class=tdTitle width="200">Free Main Memory</td><td class=tdText width="400">302864 kB (74.10%)</td></tr><tr><td class=tdTitle width="200">Available Flash Memory</td><td class=tdText width="400">27776 kB</td></tr><tr><td class=tdTitle width="200">Free Flash Memory</td><td class=tdText width="400">0 kB (0%)</td></tr><tr><td class=tdTitle width="200">CPU-Load User</td><td class=tdText width="400">0%</td></tr><tr><td class=tdTitle width="200">CPU-Load System</td><td class=tdText width="400">0%</td></tr><tr><td class=tdTitle width="200">DNS Cache Memory</td><td class=tdText width="400">-1</td></tr><tr><td class=tdTitlec colspan=2><b>NAPT Entries</b></td></tr><tr><td class=tdTitle width="200">Binding time (tcp)</td><td class=tdText width="400">600
+</td></tr><tr><td class=tdTitle width="200">Binding time (udp)</td><td class=tdText width="400">120
+</td></tr><tr><td class=tdTitle width="200">Actual number of entries</td><td class=tdText width="400">11
+</td></tr><tr><td class=tdTitle width="200">Maximum number of entries</td><td class=tdText width="400">16384
+</td></tr></table>
+			</p>
+		</td>
+	</tr>
+	<tr>
+		<td class="mainmsgR">
+			<input type="button" class="formsbuttonref" value="Refresh" name="Refresh" onClick="rescan();">
+		</td>
+	</tr>
+</table>
+</form>
+<script language="JavaScript">
+process_doc();
+</script>
+</body>
+</html>

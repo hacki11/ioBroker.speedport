@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Speedport Konfigurationsprogramm</title>
+
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <meta name="author" content="DTAG J.Huber">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <script type="text/javascript">
+        /* <![CDATA[ */
+        var rootRelative = '../';
+        var JSONSource   = '../../data/Login.json';
+        /* ]]> */
+    </script>
+
+    <meta name="SKYPE_TOOLBAR" content="SKYPE_TOOLBAR_PARSER_COMPATIBLE" />
+    <script type="text/javascript" src="../../lang/de.js"></script>
+    <script type="text/javascript" src="../../lang/err_de.js"></script>
+    <script type="text/javascript">
+        var _httoken = 1143855916;
+    </script>
+
+    <link rel="shortcut icon" type="image/x-icon" href="../../images/icons/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="../../images/icons/apple-touch-icon.png">
+
+
+    <link rel="stylesheet" media="screen" href="../../css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="../../css/reset-fonts-grids.css">
+    <link rel="stylesheet" type="text/css" href="../../css/xstyle.css">
+    <link rel="stylesheet" type="text/css" href="../../css/tcombox.css">
+    <link rel="stylesheet" type="text/css" href="../../css/branding.css">
+    <link rel="stylesheet" type="text/css" href="../../css/mainnav.css">
+    <link rel="stylesheet" type="text/css" href="../../css/subnav.css">
+    <link rel="stylesheet" type="text/css" href="../../css/content.css">
+    <link rel="stylesheet" type="text/css" href="../../css/buttons.css">
+    <link rel="stylesheet" type="text/css" href="../../css/checkbox.css">
+    <link rel="stylesheet" type="text/css" href="../../css/formular.css">
+    <link rel="stylesheet" media="screen" href="../../css/mediascreens.css">
+
+
+    <script type="text/javascript" src="../../js/jquery-1.3.2.min1.js"></script>
+
+    <script type="text/javascript" src="../../js/global.js"></script>
+    <script type="text/javascript" src="../../js/external.libs.js"></script>
+    <script type="text/javascript" src="../../js/jquery.logging.js"></script>
+    <script type="text/javascript" src="../../js/jquery.i18n.js"></script>
+    <script type="text/javascript" src="../../js/jquery.templateforms.js"></script>
+    <script type="text/javascript" src="../../js/jquery-change.js"></script>
+    <script type="text/javascript" src="../../js/jquery-addons.js"></script>
+
+    <script type="text/javascript" src="../../js/jsonvariables.js"></script>
+
+    <script type="text/javascript" src="../../js/sjcl.js"></script>
+
+
+    <script type="text/javascript" src="../../js/pages/login.js"></script>
+
+
+</head>
+
+<body>
+<div id="container" class="loginview">
+    <div id="brandingarea">
+
+
+        <div class="navHeader">
+            <div class="navHeaderImage">
+                <img src="../../images/icons/logo.png" width="54" height="26" alt="Deutsche Telekom">
+            </div>
+            <div id="navHeaderlinks">
+                <a href="?lang=de">Deutsch</a>
+                <a href="?lang=en">English</a>
+                <a href="customerCareCenter" id="ccenterlink" class="getLink" target="_blank" data-i18n="key_customerCenter">Kundencenter</a>
+            </div>
+        </div>
+
+
+    </div>
+
+    <div id="navigationarea">
+
+
+        <div class="navbar navbar-default">
+            <div class="navbar-header pull-left">
+                <span class="navbar-product">Speedport W 925V</span>
+            </div>
+            <div class="navbar-header pull-right">
+                <ul class="nav navbar-nav">
+                    <li id="manual"><a href="../manual/index.html?open=chp_manual" target="ba_win_SPW925V">
+                        <div class="navbarImage"><img src="../../images/icons/mn_manual.png" width="24" height="24" alt="Hilfe"></div>
+                        <div class="navbarText" data-i18n="category_manual">Hilfe</div>
+                    </a></li>
+                </ul>
+            </div>
+        </div>
+
+
+    </div>
+
+    <div id="maincontentarea">
+
+
+        <div id="mobileSubnavi">
+            <ul>
+                <li class="menuTopic"></li>
+                <ul id="mobileSubnaviList">
+                    <li><a href="index.html" data-i18n="nav_login">Speedport Login</a></li>
+                    <li><a href="status.html" data-i18n="nav_status">Status-Informationen</a></li>
+                </ul>
+            </ul>
+        </div>
+
+
+
+        <div id="subnavigation" style="float:left;">
+            <ul>
+                <li>
+                    <a href="index.html" id="login_page">
+                        <span class="subnav"  data-i18n="nav_login">Speedport Login</span>
+                        <span class="tooltip" data-i18n="nav_login_tooltip" style="display: none;">Melden Sie sich an, um Ihren Speedport zu konfigurieren.</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="status.html">
+                        <span class="subnav"  data-i18n="nav_status">Status-Informationen</span>
+                        <span class="tooltip" data-i18n="nav_status_tooltip" style="display: none;">Die wichtigsten Status-Informationen auf einen Blick.</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+
+
+        <div id="contentform" class="loginview">
+            <div class="form-internal">
+                <address style="display: none;">
+                    <span class="form-action">../../data/Login.json</span>
+                    <span class="form-destination"></span>
+                </address>
+                <div id="contentcontainer">
+                    <div id="containercontent">
+                        <div>
+                            <div class="c1c" id="show_login">
+                                <h1 id="login_std" style="font-size: 14px; text-align: center;" data-i18n="login_caption">Login</h1>
+                                <h1 id="login_ass" style="font-size: 14px; text-align: center; display: none;" data-i18n="loginass_caption">Einrichtungsassistent</h1>
+                                <div class="topline"></div>
+                                <div style="padding-bottom: 5px; padding-left: 20px;"><img id="pic_login" src="../../images/visualizations/login.png" width="420" height="218" alt="Speedport"></div>
+                            </div>
+
+                            <div class="c1c" id="show_jshinw">
+                                <span class="warnmessage" data-i18n="login_jshinweis">Bitte aktivieren Sie Javascript in Ihrem Internet-Browser! Das Konfigurationsprogramm kann sonst nicht ausgeführt werden.<br><br>Diese Meldung kann auch durch den Privat- oder Inkognito-Modus des Browsers ausgelöst werden. Verwenden Sie stattdessen bitte den normalen Modus.</span>
+                            </div>
+
+                            <div id="show_dslhinw" style="display: none;">
+                                <h1 style="font-size: 14px; text-align: center;" data-i18n="dslhinweis_caption">Speedport Status - keine Verbindung</h1>
+                                <div class="topline"></div>
+                                <div class="c1c">
+                                    <span data-i18n="dslhinweis_content_1">Bitte prüfen Sie auf Ihrer Auftragsbestätigung, ob Ihr Anschluss bereits freigeschaltet ist (Bereitstellungstermin). Wenn Sie keine Verbindung aufbauen können, obwohl Ihr Anschluss freigeschaltet ist, liegt vermutlich ein Verkabelungsproblem vor.</span>
+                                </div>
+                                <div class="c1c">
+                                    <span data-i18n="dslhinweis_content_2">Gehen Sie bitte wie folgt vor:</span>
+                                </div>
+                                <div class="c1c">
+                                    <ul>
+                                        <li>
+                                            <span data-i18n="dslhinweis_content_3">Prüfen Sie anhand der Abbildung, ob Ihr Speedport richtig verkabelt ist.</span>
+                                            <img src="../../images/visualizations/wiring_ip.png" style="padding-top: 8px; padding-bottom: 6px; margin-left: -14px;" width="452" height="147" alt="Anschlussschema">
+                                        </li>
+                                        <li>
+                                            <span data-i18n="dslhinweis_content_4">Bitte warten Sie, bis die Status-LED am Speedport dauerhaft leuchtet.</span>
+                                        </li>
+                                        <li id="show_chk_again">
+                                            <span data-i18n="dslhinweis_content_5">Klicken Sie dann auf „Erneut prüfen“.</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div style="clear: both; height: 10px;"></div>
+                                <button id="dslchkbutton" type="button" style="margin-left: 180px;" data-i18n="btn_check_again">Erneut prüfen</button>
+                                <div class="c1c" id="show_chk_fail" style="display: none;">
+                                    <span class="warnmessage" data-i18n="login_chkfail">Es ist immer noch nicht möglich, eine Verbindung mit dem Internet herzustellen.</span>
+                                </div>
+                            </div>
+
+                            <div id="show_dslok" style="display: none;">
+                                <h1 style="font-size: 14px; text-align: center;" data-i18n="connectok_caption">Speedport Status</h1>
+                                <div class="topline"></div>
+                                <div class="c1c">
+                                    <img src="../../images/visualizations/login.png" style="padding-bottom: 5px; padding-left: 17px;" width="420" height="218" alt="Speedport">
+                                </div>
+                                <div class="c1c" style="padding-left: 105px;">
+                                    <span class="okmessage" data-i18n="connectok_content">Die DSL-Verbindung ist nun hergestellt.</span>
+                                </div>
+                                <button id="startbutton" type="button" style="margin-left: 175px;" data-i18n="btn_start_config">Einrichtung starten</button>
+                            </div>
+
+                            <div id="txt_ass" class="c1c" style="display: none;">
+                                <span data-i18n="loginass_content_1">Richten Sie in wenigen Schritten Internetzugang, WLAN und Rufnummern ein.</span>
+                            </div>
+                            <div id="pwd_org" class="c1c" style="display: none;">
+                                <span data-i18n="login_content_1">Bitte geben Sie das Gerätepasswort ein. Sie finden es an Ihrem Speedport.</span>
+                            </div>
+                            <div id="pwd_chg" style="display: none;">
+                                <div class="c2c">
+                                    <div class="left">
+                                        <span data-i18n="login_content_2">Bitte geben Sie Ihr Gerätepasswort ein.</span>
+                                    </div>
+                                    <div class="right helpme" id="lostpw">
+                                        <a href="#" data-i18n="helpme_lost_pwd">Gerätepasswort vergessen?</a>
+                                    </div>
+                                </div>
+                                <div id="helpme_lostpw">
+                                    <span data-i18n="helpme_lost_pwd_1">Wenn Sie ein geändertes Gerätepasswort vergessen haben, müssen Sie den Speedport in die Werkseinstellungen zurücksetzen.</span><br>
+                                    <span class="warnLabel" style="color: #000000; margin-top: 5px; background-position: 0;" data-i18n="helpme_lost_pwd_2">Durch diese Aktion gehen alle persönlichen Einstellungen verloren.</span><br>
+                                    <span data-i18n="helpme_lost_pwd_3" style="font-weight: bold;">So setzen Sie den Speedport in die Werkseinstellungen zurück:</span>
+                                    <ul>
+                                        <li style="margin-top: 5px;" data-i18n="helpme_lost_pwd_4">Drücken Sie ca. 5 Sekunden mit einem dünnen Gegenstand in die kleine, mit „Reset“ bezeichnete Öffnung auf der Rückseite des Speedport.</li>
+                                        <li style="margin-top: 5px;" data-i18n="helpme_lost_pwd_5">Geben Sie bei der nächsten Passwortabfrage das Gerätepasswort ein, das auf der Unterseite des Speedport steht.</li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="c2c" style="display: none;" id="invalid_router_password">
+                                <div class="right">
+                                    <span class="validationLabel" data-i18n="login_pwdhinweis">Geben Sie Ihr Gerätepasswort ein!</span>
+                                </div>
+                            </div>
+                            <div id="show_inppwd" style="display: none;">
+                                <div class="c2c">
+                                    <div class="left">
+                                        <span data-i18n="login_pwd_label">Gerätepasswort:</span>
+                                    </div>
+                                    <div class="right">
+
+                                        <input type="password" autocomplete="off" id="router_password" name="password" class="{validate:{required:true,minlength:1,maxlength:32,errorlabel:'[id^=invalid_router_password]'}}" maxlength="32">
+
+                                    </div>
+                                </div>
+                                <div class="c2c">
+                                    <div class="right">
+                                        <input type="checkbox" autocomplete="off" id="showpw_router_password" name="showpw">
+                                        <label for="showpw_router_password" data-i18n="display_chars">Zeichen anzeigen</label>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="c1c" id="invalid_doublelogin" style="display: none;">
+                                <h1 data-i18n="doublelogin_caption">Login nicht möglich</h1>
+                                <span class="warnmessage">
+          <span data-i18n="error_message_doublelogin_1">Das Konfigurationsprogramm wird bereits von einem Benutzer des Gerätes mit der IP-Adresse</span>
+          <span id="login_other_ip">0.0.0.0</span>
+          <span data-i18n="error_message_doublelogin_2">verwendet. Es können nicht mehrere Geräte gleichzeitig auf das Konfigurationsprogramm zugreifen.</span>
+      </span>
+                            </div>
+
+                            <div class="c1c" id="invalid_login" style="display: none;">
+                                <span class="warnmessage" data-i18n="error_message_login">Login fehlgeschlagen. Sie haben ein falsches Gerätepasswort eingegeben. Bitte versuchen Sie es erneut und achten Sie auf die korrekte Schreibweise.</span>
+                            </div>
+
+                            <div class="c1c" id="login_locked" style="display: none;">
+      <span class="warnmessage einzeilig">
+        <span data-i18n="login_locked_1">Der Login ist für</span>
+        <span id="login_disabled_seconds">0</span>
+        <span data-i18n="login_locked_2">Sekunden gesperrt.</span>
+      </span>
+                            </div>
+                            <div style="clear: both; height: 12px;"></div>
+
+                        </div>
+                        <div id="is_login_page"></div>
+
+                    </div>
+                    <div id="footercontent" style="display: block;">
+                        <div id="fooooter">
+                            <div class="buttongroup">
+                                <button id="skipbutton" type="button" class="submitBtnActive" style="display: none;" data-i18n="btn_skip">Überspringen</button>
+                                <button id="loginbutton" type="submit" name="action" class="submitBtnActive" style="display: none;" data-i18n="btn_login">Login</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</div>
+
+<div id="wheelpane" style="display: none; z-index: 600000;">
+    <span class="wheel"></span>
+</div>
+
+
+
+</body>
+
+</html>

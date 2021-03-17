@@ -7,7 +7,7 @@
 
         // check JS files
         "allowJs": true,
-        "checkJs": true,
+        "checkJs": false,
 
         "module": "commonjs",
         "moduleResolution": "node",

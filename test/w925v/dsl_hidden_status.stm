@@ -1,0 +1,52 @@
+
+
+var dsl_opmode = "VDSL";
+var upFEC = "16";
+var downFEC = "16";
+var dsl_pathmode = "fast";
+var dsl_state = " 0x801 (showtime)";
+var dsl_training = " VDSL";
+var dsl_mode = "DSL_G997_PMS_L0";
+var dsl_vpivci = "1/32";
+var upstream_status = new Array();
+var downstream_status = new Array();
+upstream_status[0] = " 46719 Kbps";
+downstream_status[0] = " 115967 Kbps";
+upstream_status[1] = " 51562 Kbps";
+downstream_status[1] = " 144451 Kbps";
+upstream_status[2] = " 10.2 dB";
+downstream_status[2] = " 13.1 dB";
+upstream_status[3] = " 12.4 dB";
+downstream_status[3] = " 12.2 dB";
+upstream_status[4] = " 12.6 dB";
+downstream_status[4] = " 12.2 dB";
+upstream_status[5] = " 4096";
+downstream_status[5] = " 4096";
+upstream_status[6] = " 32 bytes";
+downstream_status[6] = " 32 bytes";
+upstream_status[7] = " 0.0 ms";
+downstream_status[7] = " 0.17 ms";
+upstream_status[8] = " 0";
+downstream_status[8] = " 0";
+upstream_status[9] = " 0";
+downstream_status[9] = " 0";
+upstream_status[10] = " 0";
+downstream_status[10] = " 0";
+var upRETX = "on(1)";
+var upBitswap = "on(1)";
+var downRETX = "on(1)";
+var downBitswap = "on(1)";
+
+var gui_rd_ver = 0;
+var _httoken = 1959715040;
+
+function evaltF()
+{
+	return true;
+}
+
+function rescan() {
+	location.href = "dsl_hidden_status.stm";
+	return false;
+}
+var dsl_title = new Array('Actual Data Rate', 'Attainable Data Rate', 'SNR Margin', 'Signal-level', 'Line Attenuation', 'BIN allocation', 'Codeword Size', 'Interleave delay', 'CRC Error Count', 'HEC Error Count', 'FEC Error Count');
