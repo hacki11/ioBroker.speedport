@@ -15,6 +15,10 @@
 
 Fetches data from Telekom Speedport Router
 
+# Supported devices
+* Speedport W 925V
+
+
 ## Changelog
 
 ### 0.0.1
