@@ -1,6 +1,6 @@
 {
   "name": "iobroker.speedport",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Fetches data from Telekom Speedport Router",
   "author": {
     "name": "hacki11",
