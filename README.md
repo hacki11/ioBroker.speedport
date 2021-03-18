@@ -9,7 +9,7 @@
 
 [![NPM](https://nodei.co/npm/iobroker.speedport.png?downloads=true)](https://nodei.co/npm/iobroker.speedport/)
 
-**Tests:** ![Test and Release](https://github.com/hacki11/ioBroker.speedport/workflows/Test%20and%20Release/badge.svg)
+![Test and Release](https://github.com/hacki11/ioBroker.speedport/workflows/Test%20and%20Release/badge.svg)
 
 ## Telekom Speedport adapter for ioBroker
 
