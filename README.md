@@ -11,13 +11,12 @@
 
 **Tests:** ![Test and Release](https://github.com/hacki11/ioBroker.speedport/workflows/Test%20and%20Release/badge.svg)
 
-## speedport adapter for ioBroker
+## Telekom Speedport adapter for ioBroker
 
 Fetches data from Telekom Speedport Router
 
-# Supported devices
+## Supported devices
 * Speedport W 925V
-
 
 ## Changelog
 
