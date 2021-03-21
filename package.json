@@ -13,7 +13,7 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git+https@github.com:hacki11/ioBroker.speedport.git"
+    "url": "git+https://github.com/hacki11/ioBroker.speedport.git"
   },
   "dependencies": {
     "@iobroker/adapter-core": "^2.4.0",
