@@ -20,6 +20,9 @@ Fetches data from Telekom Speedport Router
 
 ## Changelog
 
+### 0.0.3
+* Fixed review findings
+
 ### 0.0.2
 * (hacki11) initial release
 
