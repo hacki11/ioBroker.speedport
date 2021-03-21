@@ -67,6 +67,12 @@
             }
         ]
     },
+    "encryptedNative": [
+        "password"
+    ],
+    "protectedNative": [
+        "password"
+    ],
     "native": {
         "host": "http://speedport.ip",
         "password": "",

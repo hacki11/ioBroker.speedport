@@ -17,6 +17,7 @@ class Speedport extends utils.Adapter {
             ...options,
             name: "speedport",
         });
+        this.initialized = false;
         this.on("ready", this.onReady.bind(this));
         this.on("unload", this.onUnload.bind(this));
     }
@@ -38,20 +39,16 @@ class Speedport extends utils.Adapter {
         this.setState("info.connection", false, true);
 
         this.log.info(`Establish connection to Speedport (${this.config.host})`);
+
         this.update();
     }
 
     update() {
         this.client.login()
             .then(() => this.connectionHandler(true))
-            .then(() => this.client.getMemCpuUtilization())
+            .then(() => this.client.getAll())
             .then(metrics => this.setStates(metrics))
-            .then(() => this.client.getDsl())
-            .then(metrics => this.setStates(metrics))
-            .then(() => this.client.getInterfaceLan())
-            .then(metrics => this.setStates(metrics))
-            .then(() => this.client.getInterfaceWan())
-            .then(metrics => this.setStates(metrics))
+            .then(() => this.initialized = true)
             .catch((error) => {
                 this.errorHandler(error);
                 this.refreshTimer();
@@ -65,8 +62,10 @@ class Speedport extends utils.Adapter {
 
     async setStates(metrics) {
         for (const metric of metrics) {
-            this.setObjectNotExistsAsync(metric.id, metric.obj)
-                .then(() => this.setStateAsync(metric.id, {val: metric.value, ack: true}));
+            if (!this.initialized) {
+                await this.setObjectNotExistsAsync(metric.id, metric.obj);
+            }
+            await this.setStateAsync(metric.id, {val: metric.value, ack: true});
         }
     }
 
