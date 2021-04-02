@@ -6,6 +6,7 @@
 
 const utils = require("@iobroker/adapter-core");
 const W925V = require("./lib/w925v");
+const Smart3 = require("./lib/smart3");
 
 class Speedport extends utils.Adapter {
 
@@ -33,7 +34,7 @@ class Speedport extends utils.Adapter {
         if (this.interval < 10000)
             this.interval = 10000;
 
-        this.client = new W925V(this.config.host, this.config.password);
+        this.client = this.createClient(this.config.device, this.config.host, this.config.password, this.log);
 
         // Reset the connection indicator during startup
         this.setState("info.connection", false, true);
@@ -43,16 +44,25 @@ class Speedport extends utils.Adapter {
         this.update();
     }
 
+    createClient(device, host, password, logger) {
+        switch (device) {
+            case "W925V":
+                return new W925V(host, password);
+            case "SMART3":
+                return new Smart3(host, password, logger);
+            default:
+                throw new Error("Could not create instance of device: " + device);
+        }
+    }
+
     update() {
         this.client.login()
             .then(() => this.connectionHandler(true))
             .then(() => this.client.getAll())
             .then(metrics => this.setStates(metrics))
             .then(() => this.initialized = true)
-            .catch((error) => {
-                this.errorHandler(error);
-                this.refreshTimer();
-            });
+            .catch((error) => this.errorHandler(error))
+            .finally(() => this.refreshTimer());
     }
 
     refreshTimer() {

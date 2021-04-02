@@ -8,6 +8,7 @@ const mock = new MockAdapter(axios);
 const {expect} = require("chai");
 const W925V = require(__dirname + "/../lib/w925v");
 const fs = require("fs");
+const sputils = require("../lib/sputils");
 
 describe("W925V => getInterfaceLan", () => {
     const sp = new W925V("http://host", "dummy");
@@ -52,14 +53,13 @@ describe("W925V => getMemCpuUtilization", () => {
 });
 
 describe("W925V => getHttoken", () => {
-    const sp = new W925V("http://host", "dummy");
     const expected = "1143855916";
 
     it(`should return ${expected}`, () => {
         const data = fs.readFileSync(__dirname + "/w925v/index.html", "utf-8");
         mock.onGet("http://host").reply(200, data, []);
 
-        return sp.getHttoken()
+        return sputils.getHttoken("http://host")
             .then(token => expect(token).to.be.equal(expected));
     });
 });
@@ -119,13 +119,12 @@ describe("W925V => sendLogin", () => {
 });
 
 describe("W925V => hashPassword", () => {
-    const sp = new W925V("http://host", "totallySecure!");
     const expected = "1ab34f298379c8f319c127769db84092826ffa834cffb3fd0261e82ed09ccb7f";
 
     it(`should return hash`, () => {
         const challenge = "cool-water";
 
-        const hash = sp.hashPassword(challenge);
+        const hash = sputils.hashPassword(challenge, "totallySecure!");
         expect(hash).to.be.equal(expected);
     });
 });
@@ -144,5 +143,6 @@ function prepareMock(page) {
     const data = fs.readFileSync(__dirname + "/w925v/" + page, "utf-8");
     mock.onGet("http://host/engineer/html/" + page).reply(200, data, []);
 }
+
 
 

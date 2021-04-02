@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Speedport Konfigurationsprogramm</title>
+
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <meta name="author" content="DTAG J.Huber">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <script type="text/javascript">
+        /* <![CDATA[ */
+        var rootRelative = '../';
+        var JSONSource   = '../../data/Login.json';
+        /* ]]> */
+    </script>
+
+    <meta name="SKYPE_TOOLBAR" content="SKYPE_TOOLBAR_PARSER_COMPATIBLE" />
+    <script type="text/javascript" src="../../lang/de.js"></script>
+    <script type="text/javascript" src="../../lang/err_de.js"></script>
+    <script type="text/javascript">
+        var _httoken = 2022817050;
+    </script>
+
+
+
+    <link rel="shortcut icon" type="image/x-icon" href="../../images/icons/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="../../images/icons/apple-touch-icon.png">
+
+
+    <link rel="stylesheet" media="screen" href="../../css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="../../css/reset-fonts-grids.css">
+    <link rel="stylesheet" type="text/css" href="../../css/xstyle.css">
+    <link rel="stylesheet" type="text/css" href="../../css/tcombox.css">
+    <link rel="stylesheet" type="text/css" href="../../css/branding.css">
+    <link rel="stylesheet" type="text/css" href="../../css/mainnav.css">
+    <link rel="stylesheet" type="text/css" href="../../css/securestatus.css">
+    <link rel="stylesheet" type="text/css" href="../../css/content.css">
+    <link rel="stylesheet" type="text/css" href="../../css/buttons.css">
+    <link rel="stylesheet" type="text/css" href="../../css/checkbox.css">
+    <link rel="stylesheet" type="text/css" href="../../css/formular.css">
+    <link rel="stylesheet" media="screen" type="text/css" href="../../css/lightbox.css">
+    <link rel="stylesheet" media="print" type="text/css" href="../../css/print.css">
+
+    <link rel="stylesheet" media="screen" type="text/css" href="../../css/mediascreens.css">
+
+
+    <script type="text/javascript" src="../../js/jquery-1.3.2.min1.js"></script>
+
+    <script type="text/javascript" src="../../js/global.js"></script>
+    <script type="text/javascript" src="../../js/external.libs.js"></script>
+    <script type="text/javascript" src="../../js/jquery.logging.js"></script>
+    <script type="text/javascript" src="../../js/jquery.i18n.js"></script>
+    <script type="text/javascript" src="../../js/jquery.templateforms.js"></script>
+    <script type="text/javascript" src="../../js/jquery-change.js"></script>
+    <script type="text/javascript" src="../../js/jquery-addons.js"></script>
+
+    <script type="text/javascript" src="../../js/jsonvariables.js"></script>
+
+    <script type="text/javascript" src="../../js/sjcl.js"></script>
+
+
+    <script type="text/javascript" src="../../js/pages/login.js"></script>
+
+
+</head>
+
+<body>
+<div id="container">
+    <div id="brandingarea">
+
+
+        <div class="navHeader">
+            <div class="navHeaderImage">
+                <img src="../../images/icons/logo.png" width="54" height="26" alt="Deutsche Telekom">
+            </div>
+            <div id="navHeaderlinks">
+                <a href="?lang=de">Deutsch</a>
+                <a href="?lang=en">English</a>
+                <a href="customerCareCenter" id="ccenterlink" class="getLink" target="TelekomCCenter" data-i18n="key_customerCenter">Kundencenter</a>
+            </div>
+        </div>
+
+
+    </div>
+
+
+    <header>
+        <nav class="navlst">
+            <div class="navlst-content">
+                <div class="navlst-product">Speedport Smart 3</div>
+                <div class="navlst-left">
+                    <ul>
+                        <li class=" apmode_off" id="navNetview"><a href="../login/netview.html">
+                            <div class="navlstImage"><img src="../../images/icons/mn_home.png" width="24" height="24" alt="Uebersicht"></div>
+                            <div class="navlstText" data-i18n="category_overview">..bersicht</div>
+                        </a></li>
+                        <li class="" id="navStatus"><a href="../login/status.html">
+                            <div class="navlstImage"><img src="../../images/icons/mn_status.png" width="24" height="24" alt="Status"></div>
+                            <div class="navlstText" data-i18n="category_status">Status</div>
+                        </a></li>
+                    </ul>
+                </div>
+                <div class="navlst-right">
+                    <ul>
+                        <li class="_active" id="login"><a href="../login/index.html">
+                            <div class="navlstImage"><img src="../../images/icons/mn_login.png" width="24" height="24" alt="Anmelden"></div>
+                            <div class="navlstText" data-i18n="category_login">Anmelden</div>
+                        </a></li>
+                        <li id="manual"><a href="../manual/index.html?open=chp_manual" target="ba_win_SPSmart3">
+                            <div class="navlstImage"><img src="../../images/icons/mn_manual.png" width="24" height="24" alt="Hilfe"></div>
+                            <div class="navlstText" data-i18n="category_manual">Hilfe</div>
+                        </a></li>
+                    </ul>
+                </div>
+
+            </div>
+        </nav>
+
+    </header>
+
+
+
+
+    <div id="maincontentarea">
+
+        <div id="contentform" class="loginview">
+            <div class="form-internal">
+                <address style="display: none;">
+                    <span class="form-action">../../data/Login.json</span>
+                    <span class="form-destination"></span>
+                </address>
+                <div id="contentcontainer">
+                    <div id="containercontent">
+                        <div>
+                            <div class="c1c" id="show_login">
+                                <h1 id="login_std" style="font-size: 14px; text-align: center;" data-i18n="login_caption">Anmelden</h1>
+                                <h1 id="login_ass" style="font-size: 14px; text-align: center; display: none;" data-i18n="loginass_caption">Einrichtungsassistent</h1>
+                                <div class="topline"></div>
+                                <div style="padding-bottom: 5px; padding-left: 20px;"><img id="pic_login" src="../../images/visualizations/login.png" width="420" height="218" alt="Speedport"></div>
+                            </div>
+
+                            <div class="c1c" id="show_jshinw">
+                                <span class="warnmessage" data-i18n="login_jshinweis">Bitte aktivieren Sie Javascript in Ihrem Internet-Browser! Das Konfigurationsprogramm kann sonst nicht ausgef..hrt werden.<br><br>Diese Meldung kann auch durch den Privat- oder Inkognito-Modus des Browsers ausgel..st werden. Verwenden Sie stattdessen bitte den normalen Modus.</span>
+                            </div>
+
+                            <div id="show_cablehinw" style="display: none;">
+                                <img src="../../images/icons/warn_22x22.png" style="float: left; margin-left: 4px; margin-top: 3px; margin-right: 8px;" width="22" height="22" alt="Keine Verbindung">
+                                <h1 style="font-size: 14px;" data-i18n="cablehinweis_caption">Es wurde keine Verbindung zum Anschluss gefunden</h1>
+                                <div class="topline"></div>
+                                <div style="clear: both; height: 20px;"></div>
+                                <div class="c2c">
+                                    <div class="left" style="width: 65%">
+                                        <span class="bold" data-i18n="cablehinweis_content_1">1. Ist Ihr Speedport richtig angeschlossen?</span>
+                                    </div>
+                                    <div class="right helpme" id="shwwiring" style="width: 35%">
+                                        <a href="#" data-i18n="cablehinweis_content_2">Wie mache ich das?</a>
+                                    </div>
+                                </div>
+                                <div id="helpme_shwwiring">
+                                    <span data-i18n="cablehinweis_content_3">Die Verkabelung h..ngt von der Art Ihres Anschlusses ab:</span><br>
+                                    <div style="clear: both; height: 8px;"></div>
+                                    <div id="shw_wiredsl"><span data-i18n="cablehinweis_content_4">DSL-Anschluss</span></div>
+
+                                    <div id="img_wiredsl">
+                                        <img src="../../images/visualizations/wiring_ip_simple.png" width="420" height="180" alt="Anschlussschema">
+                                        <div><span data-i18n="cablehinweis_content_6">Bitte warten Sie nach dem Einstecken des Kabels, bis die Link-LED am Speedport dauerhaft leuchtet.</span></div>
+                                    </div>
+                                </div>
+                                <div class="c2c">
+                                    <div class="left" style="width: 65%">
+                                        <span class="bold" data-i18n="cablehinweis_content_7">2. Ist Ihr neuer Anschluss schon freigeschaltet?</span>
+                                    </div>
+                                    <div class="right helpme" id="shwdate" style="width: 35%">
+                                        <a href="#" data-i18n="cablehinweis_content_8">Wo finde ich den Termin?</a>
+                                    </div>
+                                </div>
+                                <div id="helpme_shwdate">
+                                    <span data-i18n="cablehinweis_content_9">Datum und Uhrzeit der Freischaltung finden Sie in Ihrer Auftragsbest..tigung. Im Einzelfall kann die Bereitstellung bis 21:00 Uhr dauern.</span>
+                                    <img src="../../images/visualizations/pic_auftrbest.png" style="margin-top: 8px; margin-bottom: 6px; margin-left: 125px;" width="220" height="210" alt="Auftragsbest..tigung">
+                                </div>
+                                <div style="clear: both; height: 18px;"></div>
+                                <div class="c1c">
+                                    <span id="show_cable_fail" class="warnmessage einzeilig" style="display: none;" data-i18n="cablehinweis_content_12">Es ist immer noch nicht m..glich, eine Verbindung zum Anschluss herzustellen.</span>
+                                    <span id="show_cable_ok" class="okmessage" style="display: none;" data-i18n="cablehinweis_content_10">Der Anschluss wurde jetzt gefunden. Sie werden automatisch weitergeleitet ...</span>
+                                </div>
+                                <div class="c1c" id="show_cable_chk_again">
+                                    <span class="infomessage" data-i18n="cablehinweis_content_11">Klicken Sie auf ...Erneut pr..fen..., wenn Sie die Punkte 1 und 2 gepr..ft haben.<br>Danach haben Sie die M..glichkeit, diese Pr..fung zu ..berspringen.</span>
+                                </div>
+                            </div>
+
+                            <div id="show_dslhinw" style="display: none;">
+                                <img src="../../images/icons/warn_22x22.png" style="float: left; margin-left: 4px; margin-top: 3px; margin-right: 8px;" width="22" height="22" alt="Verbindung nicht synchron">
+                                <h1 style="font-size: 14px;" data-i18n="dslhinweis_caption">DSL-Verbindung nicht synchron</h1>
+                                <div class="topline"></div>
+                                <div style="clear: both; height: 10px;"></div>
+                                <div class="c1c">
+                                    <span class="bold" id="dslhinw_ind"></span>
+                                    <span id="dslhinw_sol"></span>
+                                </div>
+                                <div style="clear: both; height: 10px;"></div>
+                                <div class="c1c" style="height: 52px;">
+                                    <span id="show_dsl_chk_again" class="infomessage" data-i18n="dslhinweis_content">Klicken Sie auf ...Erneut pr..fen..., wenn die Link-LED am Speedport dauerhaft leuchtet. Sollten Sie diese Pr..fung ..berspringen, k..nnen Sie im Konfigurationsprogramm einige Einstellungen m..glicherweise nicht vornehmen.</span>
+                                    <span id="show_dsl_fail" class="warnmessage einzeilig" style="display: none;" data-i18n="cablehinweis_content_12">Es ist immer noch nicht m..glich, eine Verbindung zum Anschluss herzustellen.</span>
+                                    <span id="show_dsl_ok" class="okmessage" style="display: none;" data-i18n="cablehinweis_content_10">Der Anschluss wurde jetzt gefunden. Sie werden automatisch weitergeleitet ...</span>
+                                </div>
+                            </div>
+
+                            <div id="txt_ass" class="c1c" style="display: none;">
+                                <span data-i18n="loginass_content_1">Richten Sie in wenigen Schritten Internetzugang, WLAN und Rufnummern ein.</span>
+                            </div>
+                            <div id="pwd_org" class="c1c" style="display: none;">
+                                <span data-i18n="login_content_1">Bitte geben Sie das Ger..tepasswort ein. Sie finden es an Ihrem Speedport.</span>
+                            </div>
+                            <div id="pwd_chg" style="display: none;">
+                                <div class="c2c">
+                                    <div class="left">
+                                        <span data-i18n="login_content_2">Bitte geben Sie Ihr Ger..tepasswort ein.</span>
+                                    </div>
+                                    <div class="right helpme" id="lostpw">
+                                        <a href="#" data-i18n="helpme_lost_pwd">Ger..tepasswort vergessen?</a>
+                                    </div>
+                                </div>
+                                <div id="helpme_lostpw">
+                                    <span data-i18n="helpme_lost_pwd_1">Wenn Sie ein ge..ndertes Ger..tepasswort vergessen haben, m..ssen Sie den Speedport in die Werkseinstellungen zur..cksetzen.</span><br>
+                                    <span class="warnLabel" style="color: #000000; margin-top: 5px; background-position: 0;" data-i18n="helpme_lost_pwd_2">Durch diese Aktion gehen alle pers..nlichen Einstellungen verloren.</span><br>
+                                    <span data-i18n="helpme_lost_pwd_3" style="font-weight: bold;">So setzen Sie den Speedport in die Werkseinstellungen zur..ck:</span>
+                                    <ul>
+                                        <li style="margin-top: 5px;" data-i18n="helpme_lost_pwd_4">Dr..cken Sie ca. 5 Sekunden mit einem d..nnen Gegenstand in die kleine, mit ...Reset... bezeichnete ..ffnung auf der R..ckseite des Speedport.</li>
+                                        <li style="margin-top: 5px;" data-i18n="helpme_lost_pwd_5">Geben Sie bei der n..chsten Passwortabfrage das Ger..tepasswort ein, das auf der Unterseite des Speedport steht.</li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="c2c" style="display: none;" id="invalid_router_password">
+                                <div class="right">
+                                    <span class="validationLabel" data-i18n="login_pwdhinweis">Geben Sie Ihr Ger..tepasswort ein!</span>
+                                </div>
+                            </div>
+                            <div id="show_inppwd" style="display: none;">
+                                <div class="c2c">
+                                    <div class="left">
+                                        <span data-i18n="login_pwd_label">Ger..tepasswort:</span>
+                                    </div>
+                                    <div class="right">
+
+
+                                        <input type="password" autocomplete="off" id="router_password" name="password" class="{validate:{required:true,minlength:1,maxlength:32,errorlabel:'[id^=invalid_router_password]'}}" maxlength="32">
+
+                                    </div>
+                                </div>
+                                <div class="c2c">
+                                    <div class="right">
+                                        <input type="checkbox" autocomplete="off" id="showpw_router_password" name="showpw">
+                                        <label for="showpw_router_password" data-i18n="display_chars">Zeichen anzeigen</label>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="c1c" id="invalid_doublelogin" style="display: none;">
+                                <h1 data-i18n="doublelogin_caption">Login nicht m..glich</h1>
+                                <span class="warnmessage">
+          <span data-i18n="error_message_doublelogin_1">Das Konfigurationsprogramm wird bereits von einem Benutzer des Ger..tes mit der IP-Adresse</span>
+          <span id="login_other_ip">0.0.0.0</span>
+          <span data-i18n="error_message_doublelogin_2">verwendet. Es k..nnen nicht mehrere Ger..te gleichzeitig auf das Konfigurationsprogramm zugreifen.</span>
+      </span>
+                            </div>
+
+                            <div class="c1c" id="invalid_login" style="display: none;">
+                                <span class="warnmessage" data-i18n="error_message_login">Login fehlgeschlagen. Sie haben ein falsches Ger..tepasswort eingegeben. Bitte versuchen Sie es erneut und achten Sie auf die korrekte Schreibweise.</span>
+                            </div>
+
+                            <div class="c1c" id="login_locked" style="display: none;">
+      <span class="warnmessage einzeilig">
+        <span data-i18n="login_locked_1">Der Login ist f..r</span>
+        <span id="login_disabled_seconds">0</span>
+        <span data-i18n="login_locked_2">Sekunden gesperrt.</span>
+      </span>
+                            </div>
+                            <div style="clear: both; height: 12px;"></div>
+
+                        </div>
+                        <div id="is_login_page"></div>
+
+                    </div>
+                    <div id="footercontent" style="display: block;">
+                        <div id="fooooter">
+                            <div class="buttongroup">
+                                <button id="dslchkbutton" type="button" style="float: left; display: none;" data-i18n="btn_check_again">Erneut pr..fen</button>
+                                <button id="skipbutton" type="button" class="submitBtnActive" style="display: none;" data-i18n="btn_skip">..berspringen</button>
+                                <button id="loginbutton" type="submit" name="action" class="submitBtnActive" style="display: none;" data-i18n="btn_login">Login</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</div>
+
+<div id="wheelpane" style="display: none; z-index: 600000;">
+    <span class="wheel"></span>
+</div>
+
+
+
+<div id="internalStylingArea" style="position: absolute; left: -9999px; top: -999px;">
+    <div class="c2c" id="invalid_default_template">
+        <div class="right">
+            <span class="validationLabel" data-i18n="validation_error">Falsche Eingabe</span>
+        </div>
+    </div>
+    <div class="c1c" id="noentry_default_template">
+        <span class="infoLabel bold" data-i18n="template_main_infoLabel">Keine Eintr..ge vorhanden</span>
+    </div>
+</div>
+
+</body>
+
+</html>

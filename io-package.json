@@ -81,7 +81,8 @@
     "native": {
         "host": "http://speedport.ip",
         "password": "",
-        "interval": "60"
+        "interval": "60",
+        "device": "W925V"
     },
     "objects": [],
     "instanceObjects": [

@@ -1,0 +1,317 @@
+[
+  {
+    "vartype": "value",
+    "varid": "device_name",
+    "varvalue": "Speedport Smart 3"
+  },
+  {
+    "vartype": "value",
+    "varid": "factorydefault",
+    "varvalue": "1"
+  },
+  {
+    "vartype": "value",
+    "varid": "rebooting",
+    "varvalue": "0"
+  },
+  {
+    "vartype": "status",
+    "varid": "loginstate",
+    "varvalue": "1"
+  },
+  {
+    "vartype": "value",
+    "varid": "router_state",
+    "varvalue": "OK"
+  },
+  {
+    "vartype": "value",
+    "varid": "bngscrat",
+    "varvalue": "1"
+  },
+  {
+    "vartype": "value",
+    "varid": "acsreach",
+    "varvalue": "1"
+  },
+  {
+    "vartype": "value",
+    "varid": "acsredir",
+    "varvalue": ""
+  },
+  {
+    "vartype": "value",
+    "varid": "provis_inet",
+    "varvalue": "044"
+  },
+  {
+    "vartype": "value",
+    "varid": "provis_voip",
+    "varvalue": "004"
+  },
+  {
+    "vartype": "value",
+    "varid": "save_fails",
+    "varvalue": "0"
+  },
+  {
+    "vartype": "value",
+    "varid": "dsl_link_status",
+    "varvalue": "online"
+  },
+  {
+    "vartype": "option",
+    "varid": "ap_mode",
+    "varvalue": "0"
+  },
+  {
+    "vartype": "status",
+    "varid": "onlinestatus",
+    "varvalue": "online"
+  },
+  {
+    "vartype": "value",
+    "varid": "days_online",
+    "varvalue": "7"
+  },
+  {
+    "vartype": "value",
+    "varid": "time_online",
+    "varvalue": "18:38:13"
+  },
+  {
+    "vartype": "value",
+    "varid": "user_disconnect_ppp",
+    "varvalue": "0"
+  },
+  {
+    "vartype": "option",
+    "varid": "dualstack",
+    "varvalue": "1"
+  },
+  {
+    "vartype": "option",
+    "varid": "always_online",
+    "varvalue": "1"
+  },
+  {
+    "vartype": "option",
+    "varid": "easy_support_deactive",
+    "varvalue": "0"
+  },
+  {
+    "vartype": "option",
+    "varid": "autofw_deactive",
+    "varvalue": "0"
+  },
+  {
+    "vartype": "option",
+    "varid": "isp_selection",
+    "varvalue": "99"
+  },
+  {
+    "vartype": "option",
+    "varid": "inet_isp",
+    "varvalue": "99"
+  },
+  {
+    "vartype": "value",
+    "varid": "other_dt",
+    "varvalue": "0"
+  },
+  {
+    "vartype": "value",
+    "varid": "t_callident",
+    "varvalue": ""
+  },
+  {
+    "vartype": "value",
+    "varid": "t_number",
+    "varvalue": ""
+  },
+  {
+    "vartype": "value",
+    "varid": "t_password",
+    "varvalue": ""
+  },
+  {
+    "vartype": "value",
+    "varid": "bngscrat",
+    "varvalue": "1"
+  },
+  {
+    "vartype": "value",
+    "varid": "acsreach",
+    "varvalue": "1"
+  },
+  {
+    "vartype": "value",
+    "varid": "acsredir",
+    "varvalue": ""
+  },
+  {
+    "vartype": "option",
+    "varid": "br_active",
+    "varvalue": "1"
+  },
+  {
+    "vartype": "option",
+    "varid": "br_active_wizard",
+    "varvalue": "1"
+  },
+  {
+    "vartype": "option",
+    "varid": "br_datarestored",
+    "varvalue": "0"
+  },
+  {
+    "vartype": "value",
+    "varid": "br_wlan_status",
+    "varvalue": "success"
+  },
+  {
+    "vartype": "value",
+    "varid": "br_call_status",
+    "varvalue": "success"
+  },
+  {
+    "vartype": "value",
+    "varid": "br_restore_view",
+    "varvalue": "failed"
+  },
+  {
+    "vartype": "value",
+    "varid": "br_showconfirm",
+    "varvalue": "1"
+  },
+  {
+    "vartype": "page_title",
+    "varid": "title",
+    "varvalue": "Speedport Smart 3 - Konfigurationsprogramm"
+  },
+  {
+    "vartype": "value",
+    "varid": "pwd_changed",
+    "varvalue": "0"
+  },
+  {
+    "vartype": "value",
+    "varid": "domain_name",
+    "varvalue": "speedport.ip"
+  },
+  {
+    "vartype": "option",
+    "varid": "expert_mode",
+    "varvalue": "1"
+  },
+  {
+    "vartype": "option",
+    "varid": "ap_mode",
+    "varvalue": "0"
+  },
+  {
+    "vartype": "value",
+    "varid": "mesh_exist",
+    "varvalue": "0"
+  },
+  {
+    "vartype": "status",
+    "varid": "router_firewall_active",
+    "varvalue": "true"
+  },
+  {
+    "vartype": "status",
+    "varid": "internet_timerule_active",
+    "varvalue": "false"
+  },
+  {
+    "vartype": "status",
+    "varid": "internet_extrule_active",
+    "varvalue": "false"
+  },
+  {
+    "vartype": "status",
+    "varid": "internet_ports_active",
+    "varvalue": "false"
+  },
+  {
+    "vartype": "status",
+    "varid": "wlan_active",
+    "varvalue": "wpa"
+  },
+  {
+    "vartype": "status",
+    "varid": "wlan_mac_active",
+    "varvalue": "false"
+  },
+  {
+    "vartype": "status",
+    "varid": "wlan_time_active",
+    "varvalue": "false"
+  },
+  {
+    "vartype": "status",
+    "varid": "wlan_guest_active",
+    "varvalue": "true"
+  },
+  {
+    "vartype": "status",
+    "varid": "wlan_guest_enc",
+    "varvalue": "true"
+  },
+  {
+    "vartype": "value",
+    "varid": "wlan_guest_timeleft",
+    "varvalue": "0"
+  },
+  {
+    "vartype": "status",
+    "varid": "abuse_detect_active",
+    "varvalue": "false"
+  },
+  {
+    "vartype": "status",
+    "varid": "privacy_policy",
+    "varvalue": "1"
+  },
+  {
+    "vartype": "status",
+    "varid": "expmode",
+    "varvalue": "1"
+  },
+  {
+    "vartype": "status",
+    "varid": "apmode_active",
+    "varvalue": "false"
+  },
+  {
+    "vartype": "status",
+    "varid": "vpn_active",
+    "varvalue": "off"
+  },
+  {
+    "vartype": "status",
+    "varid": "vpn_act_users",
+    "varvalue": "0"
+  },
+  {
+    "vartype": "status",
+    "varid": "hsfon_show",
+    "varvalue": "true"
+  },
+  {
+    "vartype": "status",
+    "varid": "hsfon_status",
+    "varvalue": "0"
+  },
+  {
+    "vartype": "status",
+    "varid": "smarthome_status",
+    "varvalue": "0"
+  },
+  {
+    "vartype": "status",
+    "varid": "backend_status",
+    "varvalue": "0"
+  }
+]
