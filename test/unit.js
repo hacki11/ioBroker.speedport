@@ -243,6 +243,12 @@ describe("EngineerMenu", () => {
             .then(metrics => assertMetricsNotNull(metrics));
     });
 
+    it(`getModuleVersions() should return non null values`, () => {
+        const em = new EngineerMenu("http://host", {});
+        prepareMock("module_versions.stm");
+        return em.getModuleVersions()
+            .then(metrics => assertMetricsNotNull(metrics));
+    });
 
     function assertMetricsNotNull(metrics) {
         for (const metric of metrics) {

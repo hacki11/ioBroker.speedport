@@ -1,0 +1,160 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<script language="JavaScript" src="routine_data.js"></script>
+<script lanugage="javascript">
+//
+var ifxusb_hcd_ver = '';
+var xdsl_ver = '';
+var sip_ver = '';
+var dect_cat_iq_ver = '';
+
+
+var fxs_vmmc_ver = '';
+var fxs_tapi_ver = '';
+var fxs_edsp_ver = '';
+var mps_ver = '';
+var smb_ver = '';
+var usb_ver = '';
+var tr69_ver = '';
+var tr64_ver = '';
+var media_ver = '';
+var fon_stack = '';
+var gui_ver = '';
+var sw_ver = '';
+var wlanchip_ver = '';
+
+var dect_module = 1;
+var usb_module = 1;
+xdsl_ver = "8.C.3.2.1.7_8.C.1.C.1.2";
+ifxusb_hcd_ver = "Linux 3.10.102";
+usb_ver = "4.0 B140513";
+sip_ver = "";
+dect_cat_iq_ver = "";
+fxs_vmmc_ver = "LQ VMMC:";
+fxs_tapi_ver ="TAPI:";
+fxs_edsp_ver ="EDSP:1.2.7.10.11";
+mps_ver ="MPS:";
+smb_ver = "Version 3.0.37";
+tr69_ver = "CWMP1-3-Device2-9.003
+CWMP1-3-Device2-9.003";
+tr64_ver = "";
+media_ver = "Version 1.1.4";
+stack_fon = "0";
+gui_ver = "2.10.109";
+sw_ver = "010135.2.5.002.0";
+wlanchip_ver = "B step";
+
+fxs_edsp_ver ="EDSP:1.2.7.10.1"; 
+
+function init(){
+	clear1();
+	document.getElementById("ver_ifxusb_hcd").innerHTML = ifxusb_hcd_ver;
+	document.getElementById("ver_xdsl").innerHTML = xdsl_ver;
+	document.getElementById("ver_sip").innerHTML = sip_ver;
+	document.getElementById("ver_dect_cat_iq").innerHTML = dect_cat_iq_ver;
+
+	document.getElementById("ver_fxs").innerHTML = fxs_vmmc_ver + ' , ' + fxs_tapi_ver + ' , ' + fxs_edsp_ver;
+	document.getElementById("ver_smb").innerHTML = smb_ver;
+	document.getElementById("ver_usb").innerHTML = usb_ver;
+	document.getElementById("ver_tr69").innerHTML = tr69_ver;
+	document.getElementById("ver_tr64").innerHTML = tr64_ver;
+	document.getElementById("ver_media").innerHTML = media_ver;
+	document.getElementById("fon_stack").innerHTML = stack_fon;
+	document.getElementById("ver_gui").innerHTML = gui_ver;
+	document.getElementById("ver_sw").innerHTML = sw_ver;
+	document.getElementById("ver_wlanchip").innerHTML = wlanchip_ver;
+	if ( usb_module == 0 ) {
+		document.getElementById('usb_smb_module').style.display = 'none';
+		document.getElementById('usb_module').style.display = 'none';
+		document.getElementById('usb_media_module').style.display = 'none';
+	}
+	if ( dect_module == 0) {
+		document.getElementById('dect_module').style.display = 'none';
+	}
+}
+</script>
+<link rel="stylesheet" type="text/css" media="screen" href="my_function3.css">
+</head>
+<body onload="init()">
+<form name="tF" action="" method="POST">
+<a NAME="top">
+<table width="90%" border="0" cellspacing="1" cellpadding="5">
+	<tr>
+		<td>
+			<p class=subtitle>Module versions</p>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<p class=normalTextb></p>
+			<p class=normalText>
+			<table width="600" border=0 cellspacing="2" cellpadding="5" class="infosys">
+				<tr>
+					<td class=tdTitle width="200">Main system</td>
+					<td class=tdText width="400" id="ver_ifxusb_hcd"></td>
+				</tr>
+				<tr>
+					<td class=tdTitle>xDSL</td>
+					<td class=tdText id="ver_xdsl"></td>
+				</tr>
+				<tr>
+					<td class=tdTitle>SIP</td>
+					<td class=tdText id="ver_sip"></td>
+				</tr>
+				<tr id="dect_module">
+					<td class=tdTitle>DECT/CAT-iq</td>
+					<td class=tdText id="ver_dect_cat_iq"></td>
+				</tr>
+				<tr>
+					<td class=tdTitle>Voice DSP</td>
+					<td class=tdText id="ver_fxs"></td>
+				</tr>
+				<tr id="usb_smb_module">
+					<td class=tdTitle>smb</td>
+					<td class=tdText id="ver_smb"></td>
+				</tr>
+				<tr id="usb_module">
+					<td class=tdTitle>USB</td>
+					<td class=tdText id="ver_usb"></td>
+				</tr>
+				<tr>
+					<td class=tdTitle>TR-069 stack</td>
+					<td class=tdText id="ver_tr69"></td>
+				</tr>
+				<tr>
+					<td class=tdTitle>TR-064 stack</td>
+					<td class=tdText id="ver_tr64"></td>
+				</tr>
+				<tr id="usb_media_module">
+					<td class=tdTitle>Media server</td>
+					<td class=tdText id="ver_media"></td>
+				</tr>
+				<tr>
+					<td class="tdTitle">FON stack</td>
+					<td class="tdText" id="fon_stack"></td>
+				</tr>
+				<tr>
+					<td class="tdTitle">Web-UI(Web-UI simulation)</td>
+					<td class="tdText" id="ver_gui"></td>
+				</tr>
+				<tr>
+					<td class="tdTitle">Software Version</td>
+					<td class="tdText" id="ver_sw"></td>
+				</tr>
+				<tr>
+					<td class="tdTitle">WiFi Chip Version</td>
+					<td class="tdText" id="ver_wlanchip"></td>
+				</tr>
+			</table>
+			</p>
+		</td>
+	</tr>
+</table>
+</a>
+</form>
+<script language="JavaScript">
+process_doc();
+</script>
+</body>
+</html>
