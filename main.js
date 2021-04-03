@@ -61,6 +61,7 @@ class Speedport extends utils.Adapter {
             .then(() => this.client.getAll())
             .then(metrics => this.setStates(metrics))
             .then(() => this.initialized = true)
+            .then(() => this.client.logout())
             .catch((error) => this.errorHandler(error))
             .finally(() => this.refreshTimer());
     }

@@ -10,48 +10,6 @@ const W925V = require(__dirname + "/../lib/w925v");
 const fs = require("fs");
 const sputils = require("../lib/sputils");
 
-describe("W925V => getInterfaceLan", () => {
-    const sp = new W925V("http://host", "dummy");
-
-    it(`should return non null values`, async () => {
-
-        prepareMock("interfaces_hidden_lan.stm");
-        return sp.getInterfaceLan()
-            .then(metrics => assertMetricsNotNull(metrics));
-    });
-});
-
-describe("W925V => getInterfacesWan", () => {
-    const sp = new W925V("http://host", "dummy");
-
-    prepareMock("interfaces_hidden_wan.stm");
-    it(`should return non null values`, () => {
-        return sp.getInterfaceWan()
-            .then(metrics => assertMetricsNotNull(metrics));
-    });
-});
-
-describe("W925V => getDsl", () => {
-    const sp = new W925V("http://host", "dummy");
-
-    prepareMock("dsl_hidden_status.stm");
-    it(`should return non null values`, () => {
-        return sp.getDsl()
-            .then(metrics => assertMetricsNotNull(metrics));
-    });
-});
-
-describe("W925V => getMemCpuUtilization", () => {
-    const sp = new W925V("http://host", "dummy");
-
-    it(`should return non null values`, () => {
-
-        prepareMock("mem_cpu_utilization.stm");
-        return sp.getMemCpuUtilization()
-            .then(metrics => assertMetricsNotNull(metrics));
-    });
-});
-
 describe("W925V => getHttoken", () => {
     const expected = "1143855916";
 
