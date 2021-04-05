@@ -116,7 +116,7 @@ describe("Smart3", () => {
         const response = fs.readFileSync(__dirname + "/smart3/html_login_index.html", "utf-8");
         mock.onGet("host", []).reply(200, response, []);
         const expected = "2022817050";
-        return sputils.getHttoken("host")
+        return sputils.getHttoken(axios.create(), "host")
             .then(actual => {
                 console.log(actual);
                 expect(actual).to.be.equal(expected);
@@ -150,7 +150,7 @@ describe("W925V", () => {
         const data = fs.readFileSync(__dirname + "/w925v/index.html", "utf-8");
         mock.onGet("http://host").reply(200, data, []);
 
-        return sputils.getHttoken("http://host")
+        return sputils.getHttoken(axios.create(), "http://host")
             .then(token => expect(token).to.be.equal(expected));
     });
 
@@ -214,14 +214,14 @@ describe("W925V", () => {
 describe("EngineerMenu", () => {
 
     it(`getInterfaceLan() should return non null values`, async () => {
-        const em = new EngineerMenu("http://host", {});
+        const em = new EngineerMenu(axios.create(), "http://host");
         prepareMock("interfaces_hidden_lan.stm");
         return em.getInterfaceLan()
             .then(metrics => assertMetricsNotNull(metrics));
     });
 
     it(`getInterfacesWan() should return non null values`, () => {
-        const em = new EngineerMenu("http://host", {});
+        const em = new EngineerMenu(axios.create(), "http://host");
         mock.reset();
         prepareMock("interfaces_hidden_wan.stm");
         return em.getInterfaceWan()
@@ -229,7 +229,7 @@ describe("EngineerMenu", () => {
     });
 
     it(`getDsl() should return non null values`, () => {
-        const em = new EngineerMenu("http://host", {});
+        const em = new EngineerMenu(axios.create(), "http://host");
         mock.reset();
         prepareMock("dsl_hidden_status.stm");
         return em.getDsl()
@@ -237,14 +237,14 @@ describe("EngineerMenu", () => {
     });
 
     it(`getMemCpuUtilization() should return non null values`, () => {
-        const em = new EngineerMenu("http://host", {});
+        const em = new EngineerMenu(axios.create(), "http://host");
         prepareMock("mem_cpu_utilization.stm");
         return em.getMemCpuUtilization()
             .then(metrics => assertMetricsNotNull(metrics));
     });
 
     it(`getModuleVersions() should return non null values`, () => {
-        const em = new EngineerMenu("http://host", {});
+        const em = new EngineerMenu(axios.create(), "http://host");
         prepareMock("module_versions.stm");
         return em.getModuleVersions()
             .then(metrics => assertMetricsNotNull(metrics));
