@@ -47,7 +47,7 @@ class Speedport extends utils.Adapter {
     createClient(device, host, password, logger) {
         switch (device) {
             case "W925V":
-                return new W925V(host, password);
+                return new W925V(host, password, logger);
             case "SMART3":
                 return new Smart3(host, password, logger);
             default:
