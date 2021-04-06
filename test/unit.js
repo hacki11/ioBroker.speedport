@@ -5,7 +5,10 @@ const axios = require("axios");
 const MockAdapter = require("axios-mock-adapter");
 // @ts-ignore
 const mock = new MockAdapter(axios);
-const {expect} = require("chai");
+const chai = require("chai"),
+    expect = chai.expect;
+chai.use(require("chai-like"));
+chai.use(require("chai-things")); // Don't swap these two
 const W925V = require(__dirname + "/../lib/w925v");
 const Smart3 = require(__dirname + "/../lib/smart3");
 const EngineerMenu = require(__dirname + "/../lib/engineer_menu");
@@ -140,6 +143,64 @@ describe("Smart3", () => {
         sp.challenge = challenge;
         return sp.sendLogin(hash, httoken);
     });
+
+    it(`should load and parse INetIP.json`, async () => {
+        const sp = new Smart3("http://speedport.ip", "dummy");
+        prepareMock("INetIP");
+        sp.challenge = "1B5C71895AFD6A58F0C16C20E1E359801E4747322FC45206190C46A70E9FFB88";
+
+        const data = await sp.getINetIP();
+
+        expect(data).that.contains.something.like({id: "WAN.ipv4_address", value: "84.140.164.244"});
+        expect(data).that.contains.something.like({id: "WAN.ipv4_gateway", value: "62.155.243.145"});
+        expect(data).that.contains.something.like({id: "WAN.ipv4_dns_pri", value: "217.0.43.177"});
+        expect(data).that.contains.something.like({id: "WAN.ipv4_dns_sec", value: "217.0.43.161"});
+        expect(data).that.contains.something.like({id: "WAN.ipv6_address", value: "2003:cd:3fff:2017:66cc:22ff:fe39:a19c"});
+        expect(data).that.contains.something.like({id: "WAN.ipv6_gateway", value: "fe80::86b5:9cff:fef9:baad"});
+        expect(data).that.contains.something.like({id: "WAN.ipv6_dns_pri", value: "2003:180:2:9000::1:0:53"});
+        expect(data).that.contains.something.like({id: "WAN.ipv6_dns_sec", value: "2003:180:2:7000::1:0:53"});
+        expect(data).that.contains.something.like({id: "DSL.link_status", value: "online"});
+        expect(data).that.contains.something.like({id: "WAN.status", value: "online"});
+        expect(data).that.contains.something.like({id: "WAN.uptime", value: 1002845});
+        expect(data).that.contains.something.like({id: "DSL.dualstack", value: 1});
+    });
+
+    it(`should load and parse LAN.json`, async () => {
+        const sp = new Smart3("http://speedport.ip", "dummy");
+        prepareMock("LAN");
+        sp.challenge = "1B5C71895AFD6A58F0C16C20E1E359801E4747322FC45206190C46A70E9FFB88";
+
+        return await sp.getLAN();
+    });
+
+    it(`should load and parse SystemMessages.json`, async () => {
+        const sp = new Smart3("http://speedport.ip", "dummy");
+        prepareMock("SystemMessages");
+        sp.challenge = "1B5C71895AFD6A58F0C16C20E1E359801E4747322FC45206190C46A70E9FFB88";
+
+        const data = await sp.getSystemMessages();
+
+        expect(data).that.contains.something.like({id: "info.firmware", value: "010137.4.8.000.0"});
+        expect(data).that.contains.something.like({id: "info.bootcode", value: "1.30.002.0000"});
+        expect(data).that.contains.something.like({id: "DSL.modem_version", value: "8.C.3.2.1.7_8.C.1.C.1.2"});
+        expect(data).that.contains.something.like({id: "DSL.downstream", value: 63671});
+        expect(data).that.contains.something.like({id: "DSL.upstream", value: 12736});
+
+    });
+
+    it(`should create get params`, async () => {
+        const sp = new Smart3("http://speedport.ip", "dummy");
+
+        const data = sp.getParams(1337);
+        expect(data.params).to.have.own.property("_time");
+        expect(data.params._lang).to.be.equal("DE");
+        expect(data.params._tn).to.be.equal(1337);
+    });
+
+    function prepareMock(page) {
+        const data = fs.readFileSync(__dirname + "/smart3/" + page + ".enc.json", "utf-8");
+        mock.onGet("http://speedport.ip/data/" + page + ".json").reply(200, data, []);
+    }
 });
 
 

@@ -1,0 +1,542 @@
+[
+  {
+    "vartype": "value",
+    "varid": "device_name",
+    "varvalue": "Speedport Smart 3"
+  },
+  {
+    "vartype": "value",
+    "varid": "factorydefault",
+    "varvalue": "1"
+  },
+  {
+    "vartype": "value",
+    "varid": "rebooting",
+    "varvalue": "0"
+  },
+  {
+    "vartype": "status",
+    "varid": "loginstate",
+    "varvalue": "1"
+  },
+  {
+    "vartype": "value",
+    "varid": "router_state",
+    "varvalue": "OK"
+  },
+  {
+    "vartype": "value",
+    "varid": "bngscrat",
+    "varvalue": "1"
+  },
+  {
+    "vartype": "value",
+    "varid": "acsreach",
+    "varvalue": "1"
+  },
+  {
+    "vartype": "value",
+    "varid": "acsredir",
+    "varvalue": ""
+  },
+  {
+    "vartype": "value",
+    "varid": "provis_inet",
+    "varvalue": "044"
+  },
+  {
+    "vartype": "value",
+    "varid": "provis_voip",
+    "varvalue": "004"
+  },
+  {
+    "vartype": "value",
+    "varid": "save_fails",
+    "varvalue": "0"
+  },
+  {
+    "vartype": "value",
+    "varid": "dsl_link_status",
+    "varvalue": "online"
+  },
+  {
+    "vartype": "option",
+    "varid": "ap_mode",
+    "varvalue": "0"
+  },
+  {
+    "vartype": "status",
+    "varid": "onlinestatus",
+    "varvalue": "online"
+  },
+  {
+    "vartype": "value",
+    "varid": "days_online",
+    "varvalue": "11"
+  },
+  {
+    "vartype": "value",
+    "varid": "time_online",
+    "varvalue": "14:34:05"
+  },
+  {
+    "vartype": "value",
+    "varid": "user_disconnect_ppp",
+    "varvalue": "0"
+  },
+  {
+    "vartype": "option",
+    "varid": "dualstack",
+    "varvalue": "1"
+  },
+  {
+    "vartype": "option",
+    "varid": "always_online",
+    "varvalue": "1"
+  },
+  {
+    "vartype": "option",
+    "varid": "easy_support_deactive",
+    "varvalue": "0"
+  },
+  {
+    "vartype": "option",
+    "varid": "autofw_deactive",
+    "varvalue": "0"
+  },
+  {
+    "vartype": "option",
+    "varid": "isp_selection",
+    "varvalue": "99"
+  },
+  {
+    "vartype": "option",
+    "varid": "inet_isp",
+    "varvalue": "99"
+  },
+  {
+    "vartype": "value",
+    "varid": "other_dt",
+    "varvalue": "0"
+  },
+  {
+    "vartype": "value",
+    "varid": "t_callident",
+    "varvalue": ""
+  },
+  {
+    "vartype": "value",
+    "varid": "t_number",
+    "varvalue": ""
+  },
+  {
+    "vartype": "value",
+    "varid": "t_password",
+    "varvalue": ""
+  },
+  {
+    "vartype": "value",
+    "varid": "bngscrat",
+    "varvalue": "1"
+  },
+  {
+    "vartype": "value",
+    "varid": "acsreach",
+    "varvalue": "1"
+  },
+  {
+    "vartype": "value",
+    "varid": "acsredir",
+    "varvalue": ""
+  },
+  {
+    "vartype": "option",
+    "varid": "br_active",
+    "varvalue": "1"
+  },
+  {
+    "vartype": "option",
+    "varid": "br_active_wizard",
+    "varvalue": "1"
+  },
+  {
+    "vartype": "option",
+    "varid": "br_datarestored",
+    "varvalue": "0"
+  },
+  {
+    "vartype": "value",
+    "varid": "br_wlan_status",
+    "varvalue": "success"
+  },
+  {
+    "vartype": "value",
+    "varid": "br_call_status",
+    "varvalue": "success"
+  },
+  {
+    "vartype": "value",
+    "varid": "br_restore_view",
+    "varvalue": "failed"
+  },
+  {
+    "vartype": "value",
+    "varid": "br_showconfirm",
+    "varvalue": "1"
+  },
+  {
+    "vartype": "page_title",
+    "varid": "title",
+    "varvalue": "Speedport Smart 3 - Konfigurationsprogramm"
+  },
+  {
+    "vartype": "value",
+    "varid": "pwd_changed",
+    "varvalue": "0"
+  },
+  {
+    "vartype": "value",
+    "varid": "domain_name",
+    "varvalue": "speedport.ip"
+  },
+  {
+    "vartype": "option",
+    "varid": "expert_mode",
+    "varvalue": "1"
+  },
+  {
+    "vartype": "option",
+    "varid": "ap_mode",
+    "varvalue": "0"
+  },
+  {
+    "vartype": "value",
+    "varid": "mesh_exist",
+    "varvalue": "0"
+  },
+  {
+    "vartype": "option",
+    "varid": "use_dyndns",
+    "varvalue": "0"
+  },
+  {
+    "vartype": "option",
+    "varid": "use_abuse",
+    "varvalue": "0"
+  },
+  {
+    "vartype": "option",
+    "varid": "use_wlan",
+    "varvalue": "1"
+  },
+  {
+    "vartype": "option",
+    "varid": "use_wlan_5ghz",
+    "varvalue": "1"
+  },
+  {
+    "vartype": "option",
+    "varid": "acs_url_empty",
+    "varvalue": "0"
+  },
+  {
+    "vartype": "option",
+    "varid": "easy_support_deactive",
+    "varvalue": "0"
+  },
+  {
+    "vartype": "option",
+    "varid": "autofw_deactive",
+    "varvalue": "0"
+  },
+  {
+    "vartype": "option",
+    "varid": "use_external_modem",
+    "varvalue": "0"
+  },
+  {
+    "vartype": "option",
+    "varid": "use_internal_modem",
+    "varvalue": "0"
+  },
+  {
+    "vartype": "option",
+    "varid": "use_wps",
+    "varvalue": "1"
+  },
+  {
+    "vartype": "option",
+    "varid": "use_nfc",
+    "varvalue": "1"
+  },
+  {
+    "vartype": "option",
+    "varid": "use_listintcalls",
+    "varvalue": "0"
+  },
+  {
+    "vartype": "option",
+    "varid": "use_extendlog",
+    "varvalue": "0"
+  },
+  {
+    "vartype": "option",
+    "varid": "use_botprotect",
+    "varvalue": "1"
+  },
+  {
+    "vartype": "option",
+    "varid": "use_speeddial",
+    "varvalue": "1"
+  },
+  {
+    "vartype": "option",
+    "varid": "use_dect",
+    "varvalue": "0"
+  },
+  {
+    "vartype": "value",
+    "varid": "active_wan_type",
+    "varvalue": "2"
+  },
+  {
+    "vartype": "option",
+    "varid": "isp_selection",
+    "varvalue": "99"
+  },
+  {
+    "vartype": "value",
+    "varid": "t_callident",
+    "varvalue": ""
+  },
+  {
+    "vartype": "value",
+    "varid": "t_number",
+    "varvalue": ""
+  },
+  {
+    "vartype": "value",
+    "varid": "t_mbnr0",
+    "varvalue": ""
+  },
+  {
+    "vartype": "value",
+    "varid": "t_mbnr1",
+    "varvalue": ""
+  },
+  {
+    "vartype": "value",
+    "varid": "t_mbnr2",
+    "varvalue": ""
+  },
+  {
+    "vartype": "value",
+    "varid": "t_mbnr3",
+    "varvalue": ""
+  },
+  {
+    "vartype": "value",
+    "varid": "t_password",
+    "varvalue": ""
+  },
+  {
+    "vartype": "value",
+    "varid": "zustart_user",
+    "varvalue": ""
+  },
+  {
+    "vartype": "value",
+    "varid": "zustart_password",
+    "varvalue": ""
+  },
+  {
+    "vartype": "value",
+    "varid": "other_name",
+    "varvalue": ""
+  },
+  {
+    "vartype": "value",
+    "varid": "other_user",
+    "varvalue": ""
+  },
+  {
+    "vartype": "value",
+    "varid": "other_password",
+    "varvalue": ""
+  },
+  {
+    "vartype": "value",
+    "varid": "other_MTU",
+    "varvalue": "1492"
+  },
+  {
+    "vartype": "option",
+    "varid": "other_ip",
+    "varvalue": "0"
+  },
+  {
+    "vartype": "option",
+    "varid": "other_dns",
+    "varvalue": "0"
+  },
+  {
+    "vartype": "value",
+    "varid": "other_ip_hb",
+    "varvalue": ""
+  },
+  {
+    "vartype": "value",
+    "varid": "other_ip_mhb",
+    "varvalue": ""
+  },
+  {
+    "vartype": "value",
+    "varid": "other_ip_mlb",
+    "varvalue": ""
+  },
+  {
+    "vartype": "value",
+    "varid": "other_ip_lb",
+    "varvalue": ""
+  },
+  {
+    "vartype": "value",
+    "varid": "other_dns_hb",
+    "varvalue": ""
+  },
+  {
+    "vartype": "value",
+    "varid": "other_dns_mhb",
+    "varvalue": ""
+  },
+  {
+    "vartype": "value",
+    "varid": "other_dns_mlb",
+    "varvalue": ""
+  },
+  {
+    "vartype": "value",
+    "varid": "other_dns_lb",
+    "varvalue": ""
+  },
+  {
+    "vartype": "value",
+    "varid": "other_sdns_hb",
+    "varvalue": ""
+  },
+  {
+    "vartype": "value",
+    "varid": "other_sdns_mhb",
+    "varvalue": ""
+  },
+  {
+    "vartype": "value",
+    "varid": "other_sdns_mlb",
+    "varvalue": ""
+  },
+  {
+    "vartype": "value",
+    "varid": "other_sdns_lb",
+    "varvalue": ""
+  },
+  {
+    "vartype": "option",
+    "varid": "idle_time",
+    "varvalue": "5"
+  },
+  {
+    "vartype": "option",
+    "varid": "askAssist",
+    "varvalue": "0"
+  },
+  {
+    "vartype": "option",
+    "varid": "dontstartAssist",
+    "varvalue": "1"
+  },
+  {
+    "vartype": "option",
+    "varid": "internetFinished",
+    "varvalue": "0"
+  },
+  {
+    "vartype": "option",
+    "varid": "phoneFinished",
+    "varvalue": "0"
+  },
+  {
+    "vartype": "option",
+    "varid": "wlanFinished",
+    "varvalue": "1"
+  },
+  {
+    "vartype": "value",
+    "varid": "public_ip_v4",
+    "varvalue": "84.140.164.244"
+  },
+  {
+    "vartype": "value",
+    "varid": "gateway_ip_v4",
+    "varvalue": "62.155.243.145"
+  },
+  {
+    "vartype": "value",
+    "varid": "dns_v4",
+    "varvalue": "217.0.43.177"
+  },
+  {
+    "vartype": "value",
+    "varid": "sec_dns_v4",
+    "varvalue": "217.0.43.161"
+  },
+  {
+    "vartype": "value",
+    "varid": "public_ip_v6",
+    "varvalue": "2003:cd:3fff:2017:66cc:22ff:fe39:a19c"
+  },
+  {
+    "vartype": "value",
+    "varid": "gateway_ip_v6",
+    "varvalue": "fe80::86b5:9cff:fef9:baad"
+  },
+  {
+    "vartype": "value",
+    "varid": "transmitted_ip_v6_pool_for_lan",
+    "varvalue": "2003:cd:3f1f:e700::/56"
+  },
+  {
+    "vartype": "value",
+    "varid": "used_ip_v6_lan",
+    "varvalue": "2003:cd:3f1f:e7e6::/64"
+  },
+  {
+    "vartype": "value",
+    "varid": "dns_v6",
+    "varvalue": "2003:180:2:9000::1:0:53"
+  },
+  {
+    "vartype": "value",
+    "varid": "sec_dns_v6",
+    "varvalue": "2003:180:2:7000::1:0:53"
+  },
+  {
+    "vartype": "option",
+    "varid": "lan_privacy_policy",
+    "varvalue": "1"
+  },
+  {
+    "vartype": "value",
+    "varid": "bngnumbers",
+    "varvalue": "3"
+  },
+  {
+    "vartype": "option",
+    "varid": "lan_allow_new",
+    "varvalue": "1"
+  },
+  {
+    "vartype": "option",
+    "varid": "use_captURL",
+    "varvalue": "0"
+  }
+]
