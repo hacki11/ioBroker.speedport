@@ -175,6 +175,7 @@ describe("Smart3", () => {
 
     it(`should load and parse SystemMessages.json`, async () => {
         const sp = new Smart3("http://speedport.ip", "dummy");
+        mock.onGet("http://speedport.ip/html/content/config/system_info.html").reply(200, "_httoken = 1234;", []);
         prepareMock("SystemMessages");
         sp.challenge = "1B5C71895AFD6A58F0C16C20E1E359801E4747322FC45206190C46A70E9FFB88";
 
