@@ -211,7 +211,7 @@ describe("Smart3", () => {
         mock.onGet("http://speedport.ip/data/" + page + ".json").reply(200, data, []);
     }
 
-    it(`should load and parse PhoneCalls.json`, async () => {
+    it(`should load and parse PhoneCalls.json`, () => {
         const sp = new Smart3("http://speedport.ip", "dummy");
         const data = sp.parse(PhoneCallsConfig, JSON.parse(fs.readFileSync(__dirname + "/smart3/PhoneCalls.json", "utf-8")));
 
@@ -287,7 +287,7 @@ describe("Smart3", () => {
         // });
     });
 
-    it(`should load and parse DeviceList.json`, async () => {
+    it(`should load and parse DeviceList.json`, () => {
         const sp = new Smart3("http://speedport.ip", "dummy");
         const response = JSON.parse(fs.readFileSync(__dirname + "/smart3/DeviceList.json", "utf-8"));
         const data = sp.parse(DeviceListConfig(response), response);
@@ -308,7 +308,7 @@ describe("Smart3", () => {
         expect(data).that.contains.something.like({id: "clients.FF-6F-BB-FF-1B-FF.is_wired", value: true});
     });
 
-    it(`should load and parse DeviceList2.json`, async () => {
+    it(`should load and parse DeviceList2.json`, () => {
         const sp = new Smart3("http://speedport.ip", "dummy");
         const response = JSON.parse(fs.readFileSync(__dirname + "/smart3/DeviceList2.json", "utf-8"));
         const data = sp.parse(DeviceListConfig(response), response);
