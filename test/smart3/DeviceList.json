@@ -1,0 +1,394 @@
+[
+  {
+    "vartype": "value",
+    "varid": "device_name",
+    "varvalue": "Speedport Smart 3"
+  },
+  {
+    "vartype": "value",
+    "varid": "factorydefault",
+    "varvalue": "1"
+  },
+  {
+    "vartype": "value",
+    "varid": "rebooting",
+    "varvalue": "0"
+  },
+  {
+    "vartype": "status",
+    "varid": "loginstate",
+    "varvalue": "1"
+  },
+  {
+    "vartype": "value",
+    "varid": "router_state",
+    "varvalue": "OK"
+  },
+  {
+    "vartype": "value",
+    "varid": "bngscrat",
+    "varvalue": "1"
+  },
+  {
+    "vartype": "value",
+    "varid": "acsreach",
+    "varvalue": "1"
+  },
+  {
+    "vartype": "value",
+    "varid": "acsredir",
+    "varvalue": ""
+  },
+  {
+    "vartype": "value",
+    "varid": "provis_inet",
+    "varvalue": "044"
+  },
+  {
+    "vartype": "value",
+    "varid": "provis_voip",
+    "varvalue": "003"
+  },
+  {
+    "vartype": "value",
+    "varid": "save_fails",
+    "varvalue": "0"
+  },
+  {
+    "vartype": "value",
+    "varid": "dsl_link_status",
+    "varvalue": "offline"
+  },
+  {
+    "vartype": "option",
+    "varid": "ap_mode",
+    "varvalue": "0"
+  },
+  {
+    "vartype": "status",
+    "varid": "onlinestatus",
+    "varvalue": "online"
+  },
+  {
+    "vartype": "value",
+    "varid": "days_online",
+    "varvalue": "3"
+  },
+  {
+    "vartype": "value",
+    "varid": "time_online",
+    "varvalue": "19:31:56"
+  },
+  {
+    "vartype": "value",
+    "varid": "user_disconnect_ppp",
+    "varvalue": "0"
+  },
+  {
+    "vartype": "option",
+    "varid": "dualstack",
+    "varvalue": "1"
+  },
+  {
+    "vartype": "option",
+    "varid": "always_online",
+    "varvalue": "1"
+  },
+  {
+    "vartype": "option",
+    "varid": "easy_support_deactive",
+    "varvalue": "0"
+  },
+  {
+    "vartype": "option",
+    "varid": "autofw_deactive",
+    "varvalue": "0"
+  },
+  {
+    "vartype": "option",
+    "varid": "isp_selection",
+    "varvalue": "99"
+  },
+  {
+    "vartype": "option",
+    "varid": "inet_isp",
+    "varvalue": "99"
+  },
+  {
+    "vartype": "value",
+    "varid": "other_dt",
+    "varvalue": "0"
+  },
+  {
+    "vartype": "value",
+    "varid": "t_callident",
+    "varvalue": ""
+  },
+  {
+    "vartype": "value",
+    "varid": "t_number",
+    "varvalue": ""
+  },
+  {
+    "vartype": "value",
+    "varid": "t_password",
+    "varvalue": ""
+  },
+  {
+    "vartype": "value",
+    "varid": "bngscrat",
+    "varvalue": "1"
+  },
+  {
+    "vartype": "value",
+    "varid": "acsreach",
+    "varvalue": "1"
+  },
+  {
+    "vartype": "value",
+    "varid": "acsredir",
+    "varvalue": ""
+  },
+  {
+    "vartype": "option",
+    "varid": "br_active",
+    "varvalue": "0"
+  },
+  {
+    "vartype": "option",
+    "varid": "br_active_wizard",
+    "varvalue": "1"
+  },
+  {
+    "vartype": "option",
+    "varid": "br_datarestored",
+    "varvalue": "0"
+  },
+  {
+    "vartype": "value",
+    "varid": "br_wlan_status",
+    "varvalue": "success"
+  },
+  {
+    "vartype": "value",
+    "varid": "br_call_status",
+    "varvalue": "success"
+  },
+  {
+    "vartype": "value",
+    "varid": "br_restore_view",
+    "varvalue": "failed"
+  },
+  {
+    "vartype": "value",
+    "varid": "br_showconfirm",
+    "varvalue": "0"
+  },
+  {
+    "vartype": "page_title",
+    "varid": "title",
+    "varvalue": "Speedport Smart 3 - Konfigurationsprogramm"
+  },
+  {
+    "vartype": "value",
+    "varid": "pwd_changed",
+    "varvalue": "1"
+  },
+  {
+    "vartype": "value",
+    "varid": "domain_name",
+    "varvalue": "speedport.ip"
+  },
+  {
+    "vartype": "option",
+    "varid": "expert_mode",
+    "varvalue": "1"
+  },
+  {
+    "vartype": "option",
+    "varid": "ap_mode",
+    "varvalue": "0"
+  },
+  {
+    "vartype": "value",
+    "varid": "mesh_exist",
+    "varvalue": "0"
+  },
+  {
+    "vartype": "value",
+    "varid": "device_view",
+    "varvalue": "0"
+  },
+  {
+    "vartype": "value",
+    "varid": "mesh_layer",
+    "varvalue": "1"
+  },
+  {
+    "vartype": "value",
+    "varid": "max_child_num",
+    "varvalue": "0"
+  },
+  {
+    "vartype": "template",
+    "varid": "addmdevice",
+    "varvalue": [
+      {
+        "vartype": "value",
+        "varid": "mdevice_name",
+        "varvalue": "PC192-168-2-111"
+      },
+      {
+        "vartype": "value",
+        "varid": "mdevice_mac",
+        "varvalue": "FF-6F-BB-FF-1B-FF"
+      },
+      {
+        "vartype": "value",
+        "varid": "mdevice_use_dhcp",
+        "varvalue": "1"
+      },
+      {
+        "vartype": "option",
+        "varid": "mdevice_fix_dhcp",
+        "varvalue": "0"
+      },
+      {
+        "vartype": "value",
+        "varid": "mdevice_hasui",
+        "varvalue": "8081"
+      },
+      {
+        "vartype": "value",
+        "varid": "mdevice_slave",
+        "varvalue": "0"
+      },
+      {
+        "vartype": "value",
+        "varid": "mdevice_type",
+        "varvalue": "0"
+      },
+      {
+        "vartype": "value",
+        "varid": "mdevice_rssi",
+        "varvalue": "0"
+      },
+      {
+        "vartype": "value",
+        "varid": "mdevice_downspeed",
+        "varvalue": "1000000000"
+      },
+      {
+        "vartype": "value",
+        "varid": "mdevice_upspeed",
+        "varvalue": "1000000000"
+      },
+      {
+        "vartype": "value",
+        "varid": "mdevice_connected",
+        "varvalue": "1"
+      },
+      {
+        "vartype": "value",
+        "varid": "mdevice_ipv4",
+        "varvalue": "192.168.2.111"
+      },
+      {
+        "vartype": "value",
+        "varid": "mdevice_gua_ipv6",
+        "varvalue": "-"
+      },
+      {
+        "vartype": "value",
+        "varid": "mdevice_ula_ipv6",
+        "varvalue": "-"
+      },
+      {
+        "vartype": "value",
+        "varid": "id",
+        "varvalue": "70"
+      }
+    ]
+  },
+  {
+    "vartype": "template",
+    "varid": "addmdevice",
+    "varvalue": [
+      {
+        "vartype": "value",
+        "varid": "mdevice_name",
+        "varvalue": "device-X"
+      },
+      {
+        "vartype": "value",
+        "varid": "mdevice_mac",
+        "varvalue": "B8-FF-F4-FF-FF-65"
+      },
+      {
+        "vartype": "value",
+        "varid": "mdevice_use_dhcp",
+        "varvalue": "1"
+      },
+      {
+        "vartype": "option",
+        "varid": "mdevice_fix_dhcp",
+        "varvalue": "1"
+      },
+      {
+        "vartype": "value",
+        "varid": "mdevice_hasui",
+        "varvalue": "0"
+      },
+      {
+        "vartype": "value",
+        "varid": "mdevice_slave",
+        "varvalue": "0"
+      },
+      {
+        "vartype": "value",
+        "varid": "mdevice_type",
+        "varvalue": "0"
+      },
+      {
+        "vartype": "value",
+        "varid": "mdevice_rssi",
+        "varvalue": "0"
+      },
+      {
+        "vartype": "value",
+        "varid": "mdevice_downspeed",
+        "varvalue": "1000000000"
+      },
+      {
+        "vartype": "value",
+        "varid": "mdevice_upspeed",
+        "varvalue": "1000000000"
+      },
+      {
+        "vartype": "value",
+        "varid": "mdevice_connected",
+        "varvalue": "1"
+      },
+      {
+        "vartype": "value",
+        "varid": "mdevice_ipv4",
+        "varvalue": "192.168.2.110"
+      },
+      {
+        "vartype": "value",
+        "varid": "mdevice_gua_ipv6",
+        "varvalue": "-"
+      },
+      {
+        "vartype": "value",
+        "varid": "mdevice_ula_ipv6",
+        "varvalue": "-"
+      },
+      {
+        "vartype": "value",
+        "varid": "id",
+        "varvalue": "2"
+      }
+    ]
+  }
+]

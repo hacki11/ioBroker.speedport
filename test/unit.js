@@ -14,6 +14,8 @@ const Smart3 = require(__dirname + "/../lib/smart3");
 const EngineerMenu = require(__dirname + "/../lib/engineer_menu");
 const fs = require("fs");
 const sputils = require("../lib/sputils");
+const {DeviceListConfig} = require("../lib/smart3_objects");
+const {PhoneCallsConfig} = require("../lib/smart3_objects");
 
 describe("Smart3", () => {
 
@@ -208,6 +210,140 @@ describe("Smart3", () => {
         const data = fs.readFileSync(__dirname + "/smart3/" + page + ".enc.json", "utf-8");
         mock.onGet("http://speedport.ip/data/" + page + ".json").reply(200, data, []);
     }
+
+    it(`should load and parse PhoneCalls.json`, async () => {
+        const sp = new Smart3("http://speedport.ip", "dummy");
+        const data = sp.parse(PhoneCallsConfig, JSON.parse(fs.readFileSync(__dirname + "/smart3/PhoneCalls.json", "utf-8")));
+
+        expect(data).that.contains.something.like({id: "calllists.missed.count", value: 3});
+        expect(data).that.contains.something.like({id: "calllists.inbound.count", value: 3});
+        expect(data).that.contains.something.like({id: "calllists.outbound.count", value: 3});
+        expect(data).that.contains.something.like({
+            id: "calllists.missed.json", value: JSON.stringify([
+                {
+                    "id": 0,
+                    "date": "2021-04-29T08:23:15.000Z",
+                    "caller": "666666",
+                    "called": "777777"
+                },
+                {
+                    "id": 1,
+                    "date": "2021-04-25T10:09:34.000Z",
+                    "caller": "222222",
+                    "called": "777777"
+                },
+                {
+                    "id": 2,
+                    "date": "2021-04-18T15:10:37.000Z",
+                    "caller": "Meister Eder",
+                    "called": "+4911111"
+                }
+            ])
+        });
+        expect(data).that.contains.something.like({
+            id: "calllists.outbound.json", value: JSON.stringify([
+                {
+                    "id": 0,
+                    "date": "2021-04-21T15:05:17.000Z",
+                    "caller": "111111",
+                    "duration": 34
+                },
+                {
+                    "id": 1,
+                    "date": "2021-04-18T15:11:35.000Z",
+                    "caller": "2222222",
+                    "duration": 27
+                },
+                {
+                    "id": 2,
+                    "date": "2021-04-18T15:11:08.000Z",
+                    "caller": "33333",
+                    "duration": 0
+                }
+            ])
+        });
+        expect(data).that.contains.something.like({
+            id: "calllists.inbound.json", value: JSON.stringify([
+                {
+                    "id": 0,
+                    "date": "2021-05-10T10:36:18.000Z",
+                    "caller": "Muster, Franz",
+                    "duration": 75
+                },
+                {
+                    "id": 1,
+                    "date": "2021-05-06T09:32:54.000Z",
+                    "caller": "Pumuckl",
+                    "duration": 44
+                },
+                {
+                    "id": 2,
+                    "date": "2021-03-26T16:58:31.000Z",
+                    "caller": "Pumuckl",
+                    "duration": 126
+                }
+            ])
+        });
+    });
+
+    it(`should load and parse DeviceList.json`, async () => {
+        const sp = new Smart3("http://speedport.ip", "dummy");
+        const response = JSON.parse(fs.readFileSync(__dirname + "/smart3/DeviceList.json", "utf-8"));
+        const data = sp.parse(DeviceListConfig(response), response);
+
+        // LAN
+        expect(data).that.contains.something.like({id: "clients.FF-6F-BB-FF-1B-FF", name: "PC192-168-2-111"});
+        expect(data).that.contains.something.like({id: "clients.FF-6F-BB-FF-1B-FF.name", value: "PC192-168-2-111"});
+        expect(data).that.contains.something.like({id: "clients.FF-6F-BB-FF-1B-FF.mac", value: "FF-6F-BB-FF-1B-FF"});
+        expect(data).that.contains.something.like({id: "clients.FF-6F-BB-FF-1B-FF.use_dhcp", value: 1});
+        expect(data).that.contains.something.like({id: "clients.FF-6F-BB-FF-1B-FF.downspeed", value: 1000});
+        expect(data).that.contains.something.like({id: "clients.FF-6F-BB-FF-1B-FF.upspeed", value: 1000});
+        expect(data).that.contains.something.like({id: "clients.FF-6F-BB-FF-1B-FF.is_online", value: true});
+        expect(data).that.contains.something.like({id: "clients.FF-6F-BB-FF-1B-FF.ip", value: "192.168.2.111"});
+        expect(data).that.contains.something.like({
+            id: "clients.FF-6F-BB-FF-1B-FF.ipv6",
+            value: ""
+        });
+        expect(data).that.contains.something.like({id: "clients.FF-6F-BB-FF-1B-FF.is_wired", value: true});
+    });
+
+    it(`should load and parse DeviceList2.json`, async () => {
+        const sp = new Smart3("http://speedport.ip", "dummy");
+        const response = JSON.parse(fs.readFileSync(__dirname + "/smart3/DeviceList2.json", "utf-8"));
+        const data = sp.parse(DeviceListConfig(response), response);
+
+        // WLAN
+        expect(data).that.contains.something.like({id: "clients.FF-05-51-10-A3-FF", name: "wlan-device1"});
+        expect(data).that.contains.something.like({id: "clients.FF-05-51-10-A3-FF.name", value: "wlan-device1"});
+        expect(data).that.contains.something.like({id: "clients.FF-05-51-10-A3-FF.mac", value: "FF-05-51-10-A3-FF"});
+        expect(data).that.contains.something.like({id: "clients.FF-05-51-10-A3-FF.use_dhcp", value: 1});
+        expect(data).that.contains.something.like({id: "clients.FF-05-51-10-A3-FF.downspeed", value: 72});
+        expect(data).that.contains.something.like({id: "clients.FF-05-51-10-A3-FF.upspeed", value: 28});
+        expect(data).that.contains.something.like({id: "clients.FF-05-51-10-A3-FF.is_online", value: true});
+        expect(data).that.contains.something.like({id: "clients.FF-05-51-10-A3-FF.ip", value: "192.168.2.10"});
+        expect(data).that.contains.something.like({
+            id: "clients.FF-05-51-10-A3-FF.ipv6",
+            value: "1234:cd:3f1f:e7e6:205:51ff:fe10:ffff"
+        });
+        expect(data).that.contains.something.like({id: "clients.FF-05-51-10-A3-FF.is_wired", value: false});
+        expect(data).that.contains.something.like({id: "clients.FF-05-51-10-A3-FF.rssi", value: -74});
+
+        // WLAN5g
+        expect(data).that.contains.something.like({id: "clients.FF-BF-DC-19-1C-FF", name: "Handy2"});
+        expect(data).that.contains.something.like({id: "clients.FF-BF-DC-19-1C-FF.name", value: "Handy2"});
+        expect(data).that.contains.something.like({id: "clients.FF-BF-DC-19-1C-FF.mac", value: "FF-BF-DC-19-1C-FF"});
+        expect(data).that.contains.something.like({id: "clients.FF-BF-DC-19-1C-FF.use_dhcp", value: 1});
+        expect(data).that.contains.something.like({id: "clients.FF-BF-DC-19-1C-FF.downspeed", value: 6});
+        expect(data).that.contains.something.like({id: "clients.FF-BF-DC-19-1C-FF.upspeed", value: 195});
+        expect(data).that.contains.something.like({id: "clients.FF-BF-DC-19-1C-FF.is_online", value: false});
+        expect(data).that.contains.something.like({id: "clients.FF-BF-DC-19-1C-FF.ip", value: "192.168.2.9"});
+        expect(data).that.contains.something.like({
+            id: "clients.FF-BF-DC-19-1C-FF.ipv6",
+            value: "1234:cd:3f1f:e7fd:9161:5d66:5123:ffff"
+        });
+        expect(data).that.contains.something.like({id: "clients.FF-BF-DC-19-1C-FF.is_wired", value: false});
+        expect(data).that.contains.something.like({id: "clients.FF-BF-DC-19-1C-FF.rssi", value: -88});
+    });
 });
 
 

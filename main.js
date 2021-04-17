@@ -73,7 +73,7 @@ class Speedport extends utils.Adapter {
 
     async setStates(metrics) {
         for (const metric of metrics) {
-            if (!this.initialized) {
+            if (!this.initialized || metric.dynamic) {
                 await this.setObjectNotExistsAsync(metric.id, metric.obj);
             }
             await this.setStateAsync(metric.id, {val: metric.value, ack: true});
