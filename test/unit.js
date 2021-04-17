@@ -145,66 +145,63 @@ describe("Smart3", () => {
         sp.challenge = challenge;
         return sp.sendLogin(hash, httoken);
     });
-    // TODO
-    // it(`should load and parse INetIP.json`, async () => {
-    //     const sp = new Smart3("http://speedport.ip", "dummy");
-    //     prepareMock("INetIP");
-    //     sp.challenge = "1B5C71895AFD6A58F0C16C20E1E359801E4747322FC45206190C46A70E9FFB88";
-    //
-    //     const data = await sp.getINetIP();
-    //
-    //     expect(data).that.contains.something.like({id: "WAN.ipv4_address", value: "84.140.164.244"});
-    //     expect(data).that.contains.something.like({id: "WAN.ipv4_gateway", value: "62.155.243.145"});
-    //     expect(data).that.contains.something.like({id: "WAN.ipv4_dns_pri", value: "217.0.43.177"});
-    //     expect(data).that.contains.something.like({id: "WAN.ipv4_dns_sec", value: "217.0.43.161"});
-    //     expect(data).that.contains.something.like({id: "WAN.ipv6_address", value: "2003:cd:3fff:2017:66cc:22ff:fe39:a19c"});
-    //     expect(data).that.contains.something.like({id: "WAN.ipv6_gateway", value: "fe80::86b5:9cff:fef9:baad"});
-    //     expect(data).that.contains.something.like({id: "WAN.ipv6_dns_pri", value: "2003:180:2:9000::1:0:53"});
-    //     expect(data).that.contains.something.like({id: "WAN.ipv6_dns_sec", value: "2003:180:2:7000::1:0:53"});
-    //     expect(data).that.contains.something.like({id: "DSL.link_status", value: "online"});
-    //     expect(data).that.contains.something.like({id: "WAN.status", value: "online"});
-    //     expect(data).that.contains.something.like({id: "WAN.uptime", value: 1002845});
-    //     expect(data).that.contains.something.like({id: "DSL.dualstack", value: 1});
-    // });
 
-    // it(`should load and parse LAN.json`, async () => {
-    //     const sp = new Smart3("http://speedport.ip", "dummy");
-    //     prepareMock("LAN");
-    //     sp.challenge = "1B5C71895AFD6A58F0C16C20E1E359801E4747322FC45206190C46A70E9FFB88";
-    //
-    //     return await sp.getLAN();
-    // });
-    //
-    // it(`should load and parse SystemMessages.json`, async () => {
-    //     const sp = new Smart3("http://speedport.ip", "dummy");
-    //     mock.onGet("http://speedport.ip/html/content/config/system_info.html").reply(200, "_httoken = 1234;", []);
-    //     prepareMock("SystemMessages");
-    //     sp.challenge = "1B5C71895AFD6A58F0C16C20E1E359801E4747322FC45206190C46A70E9FFB88";
-    //
-    //     const data = await sp.getSystemMessages();
-    //
-    //     expect(data).that.contains.something.like({id: "info.firmware", value: "010137.4.8.000.0"});
-    //     expect(data).that.contains.something.like({id: "info.bootcode", value: "1.30.002.0000"});
-    //     expect(data).that.contains.something.like({id: "DSL.modem_version", value: "8.C.3.2.1.7_8.C.1.C.1.2"});
-    //     expect(data).that.contains.something.like({id: "DSL.downstream", value: 63671});
-    //     expect(data).that.contains.something.like({id: "DSL.upstream", value: 12736});
-    //
-    // });
-    //
-    // it(`should load and parse smart3_interfaces_hidden_wan.stm`, async () => {
-    //     const sp = new Smart3("http://speedport.ip", "dummy");
-    //     const data = fs.readFileSync(__dirname + "/engineer_menu/smart3/interfaces_hidden_wan.stm", "utf-8");
-    //     mock.onGet("http://speedport.ip/engineer/html/interfaces_hidden_wan.stm").reply(200, data, []);
-    //
-    //     const result = await sp.em.getInterfaceWan();
-    //
-    //     expect(result).that.contains.something.like({id: "WAN.interface", value: "pppoe-wan"});
-    //     expect(result).that.contains.something.like({id: "WAN.mac_address", value: "F0:86:20:05:36:26"});
-    //     expect(result).that.contains.something.like({id: "WAN.media", value: "Ethernet"});
-    //     expect(result).that.contains.something.like({id: "WAN.status", value: "connected"});
-    //     expect(result).that.contains.something.like({id: "WAN.type", value: 1});
-    //
-    // });
+    it(`Smart3 should load and parse INetIP.json`, async () => {
+        const sp = new Smart3("http://speedport.ip", "dummy");
+        mock.onGet("http://speedport.ip/html/content/internet/connection.html").reply(200, "_httoken = 1234;", []);
+        prepareMock("INetIP");
+        sp.challenge = "1B5C71895AFD6A58F0C16C20E1E359801E4747322FC45206190C46A70E9FFB88";
+
+        const data = await sp.getINetIP();
+
+        // expect(data).that.contains.something.like({id: "WAN.ipv4_address", value: "84.140.164.244"});
+        // expect(data).that.contains.something.like({id: "WAN.ipv4_gateway", value: "62.155.243.145"});
+        expect(data).that.contains.something.like({id: "WAN.ipv4_dns_primary", value: "217.0.43.177"});
+        expect(data).that.contains.something.like({id: "WAN.ipv4_dns_secondary", value: "217.0.43.161"});
+        // expect(data).that.contains.something.like({id: "WAN.ipv6_address", value: "2003:cd:3fff:2017:66cc:22ff:fe39:a19c"});
+        // expect(data).that.contains.something.like({id: "WAN.ipv6_gateway", value: "fe80::86b5:9cff:fef9:baad"});
+        expect(data).that.contains.something.like({id: "WAN.ipv6_dns_primary", value: "2003:180:2:9000::1:0:53"});
+        expect(data).that.contains.something.like({id: "WAN.ipv6_dns_secondary", value: "2003:180:2:7000::1:0:53"});
+        expect(data).that.contains.something.like({id: "DSL.link_status", value: "online"});
+        // expect(data).that.contains.something.like({id: "WAN.status", value: "online"});
+        expect(data).that.contains.something.like({id: "WAN.uptime", value: 1002845});
+        expect(data).that.contains.something.like({id: "DSL.dualstack", value: 1});
+    });
+
+    it(`Smart3 should load and parse SystemMessages.json`, async () => {
+        const sp = new Smart3("http://speedport.ip", "dummy");
+        mock.onGet("http://speedport.ip/html/content/config/system_info.html").reply(200, "_httoken = 1234;", []);
+        prepareMock("SystemMessages");
+        sp.challenge = "1B5C71895AFD6A58F0C16C20E1E359801E4747322FC45206190C46A70E9FFB88";
+
+        const data = await sp.getSystemMessages();
+
+        // expect(data).that.contains.something.like({id: "info.firmware", value: "010137.4.8.000.0"});
+        expect(data).that.contains.something.like({id: "info.bootcode", value: "1.30.002.0000"});
+        expect(data).that.contains.something.like({id: "info.name", value: "Speedport Smart 3"});
+        expect(data).that.contains.something.like({id: "DSL.modem_version", value: "8.C.3.2.1.7_8.C.1.C.1.2"});
+        expect(data).that.contains.something.like({id: "info.hw_revision", value: "05"});
+        expect(data).that.contains.something.like({id: "info.serial_number", value: "90100000000J911008865"});
+        expect(data).that.contains.something.like({id: "DSL.downstream", value: 63671});
+        expect(data).that.contains.something.like({id: "DSL.upstream", value: 12736});
+        expect(data).that.contains.something.like({id: "info.dect_version", value: "CM20_V3_2_22"});
+    });
+
+    it(`Smart3/EM should load and parse InterfaceWan`, async () => {
+        const sp = new Smart3("http://speedport.ip", "dummy");
+        const data = fs.readFileSync(__dirname + "/engineer_menu/smart3/interfaces_hidden_wan.stm", "utf-8");
+        mock.onGet("http://speedport.ip/engineer/html/interfaces_hidden_wan.stm").reply(200, data, []);
+
+        const result = await sp.em.getInterfaceWan();
+
+        expect(result).that.contains.something.like({id: "WAN.interface", value: "ptm0"});
+        expect(result).that.contains.something.like({id: "WAN.mac_address", value: "94:6A:B0:FF:AA:BB"});
+        expect(result).that.contains.something.like({id: "WAN.media", value: "VDSL"});
+        expect(result).that.contains.something.like({id: "WAN.status", value: "idle"});
+        expect(result).that.contains.something.like({id: "WAN.type", value: 2});
+        expect(result).that.contains.something.like({id: "WAN.rx_packets", value: 138616563});
+        expect(result).that.contains.something.like({id: "WAN.rx_bytes", value: 2147483647});
+    });
 
     function prepareMock(page) {
         const data = fs.readFileSync(__dirname + "/smart3/" + page + ".enc.json", "utf-8");
@@ -219,28 +216,28 @@ describe("Smart3", () => {
         expect(data).that.contains.something.like({id: "calllists.inbound.count", value: 3});
         expect(data).that.contains.something.like({id: "calllists.outbound.count", value: 3});
         // TODO fails on gh actions
-        // expect(data).that.contains.something.like({
-        //     id: "calllists.missed.json", value: JSON.stringify([
-        //         {
-        //             "id": 0,
-        //             "date": "2021-04-29T08:23:15.000Z",
-        //             "caller": "666666",
-        //             "called": "777777"
-        //         },
-        //         {
-        //             "id": 1,
-        //             "date": "2021-04-25T10:09:34.000Z",
-        //             "caller": "222222",
-        //             "called": "777777"
-        //         },
-        //         {
-        //             "id": 2,
-        //             "date": "2021-04-18T15:10:37.000Z",
-        //             "caller": "Meister Eder",
-        //             "called": "+4911111"
-        //         }
-        //     ])
-        // });
+        expect(data).that.contains.something.like({
+            id: "calllists.missed.json", value: JSON.stringify([
+                {
+                    "id": 0,
+                    "date": "2021-04-29T08:23:15.000Z",
+                    "caller": "666666",
+                    "called": "777777"
+                },
+                {
+                    "id": 1,
+                    "date": "2021-04-25T10:09:34.000Z",
+                    "caller": "222222",
+                    "called": "777777"
+                },
+                {
+                    "id": 2,
+                    "date": "2021-04-18T15:10:37.000Z",
+                    "caller": "Meister Eder",
+                    "called": "+4911111"
+                }
+            ])
+        });
         // expect(data).that.contains.something.like({
         //     id: "calllists.outbound.json", value: JSON.stringify([
         //         {
@@ -344,7 +341,7 @@ describe("Smart3", () => {
         });
         expect(data).that.contains.something.like({id: "clients.FF-BF-DC-19-1C-FF.is_wired", value: false});
         expect(data).that.contains.something.like({id: "clients.FF-BF-DC-19-1C-FF.rssi", value: -88});
-    });
+    }).timeout(3000);
 });
 
 
