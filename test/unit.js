@@ -221,6 +221,7 @@ describe("Smart3", () => {
         expect(data).that.contains.something.like({id: "calllists.outbound.json"});
 
         const missedCalls = JSON.parse(jsonpath.query(data, "$..[?(@.id == \"calllists.missed.json\")].value"));
+        console.log(missedCalls);
         expect(missedCalls).that.contains.something.like({
             "id": 0,
             "date": "2021-04-29T08:23:15.000Z",
@@ -446,7 +447,7 @@ describe("EngineerMenu", () => {
             if (metric.value == null) {
                 console.log(metric.id);
             }
-            console.log(metrics);
+            //console.log(metrics);
             expect(metric.value).is.not.null;
         }
     }
