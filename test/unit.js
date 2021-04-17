@@ -422,14 +422,6 @@ describe("EngineerMenu", () => {
             .then(metrics => assertMetricsNotNull(metrics));
     });
 
-    it(`getInterfacesWan() should return non null values`, () => {
-        const em = new EngineerMenu(axios.create(), "http://host");
-        mock.reset();
-        prepareMock("interfaces_hidden_wan.stm");
-        return em.getInterfaceWan()
-            .then(metrics => assertMetricsNotNull(metrics));
-    });
-
     it(`getDsl() should return non null values`, () => {
         const em = new EngineerMenu(axios.create(), "http://host");
         mock.reset();
