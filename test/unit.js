@@ -215,6 +215,7 @@ describe("Smart3", () => {
         const sp = new Smart3("http://speedport.ip", "dummy");
         const data = sp.parse(PhoneCallsConfig, JSON.parse(fs.readFileSync(__dirname + "/smart3/PhoneCalls.json", "utf-8")));
 
+        console.log(data);
         expect(data).that.contains.something.like({id: "calllists.missed.count", value: 3});
         expect(data).that.contains.something.like({id: "calllists.inbound.count", value: 3});
         expect(data).that.contains.something.like({id: "calllists.outbound.count", value: 3});
