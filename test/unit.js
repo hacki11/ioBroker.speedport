@@ -221,22 +221,21 @@ describe("Smart3", () => {
         expect(data).that.contains.something.like({id: "calllists.outbound.json"});
 
         const missedCalls = JSON.parse(jsonpath.query(data, "$..[?(@.id == \"calllists.missed.json\")].value"));
-        console.log(missedCalls);
         expect(missedCalls).that.contains.something.like({
             "id": 0,
-            "date": "2021-04-29T08:23:15.000Z",
+            "date": "2021-03-29T10:23:15+02:00",
             "caller": "666666",
             "called": "777777"
         });
         expect(missedCalls).that.contains.something.like({
             "id": 1,
-            "date": "2021-04-25T10:09:34.000Z",
+            "date": "2021-03-25T12:09:34+01:00",
             "caller": "222222",
             "called": "777777"
         });
         expect(missedCalls).that.contains.something.like({
             "id": 2,
-            "date": "2021-04-18T15:10:37.000Z",
+            "date": "2021-03-18T17:10:37+01:00",
             "caller": "Meister Eder",
             "called": "+4911111"
         });
@@ -244,19 +243,19 @@ describe("Smart3", () => {
         const outboundCalls = JSON.parse(jsonpath.query(data, "$..[?(@.id == \"calllists.outbound.json\")].value"));
         expect(outboundCalls).that.contains.something.like({
             "id": 0,
-            "date": "2021-04-21T15:05:17.000Z",
+            "date": "2021-03-21T17:05:17+01:00",
             "caller": "111111",
             "duration": 34
         });
         expect(outboundCalls).that.contains.something.like({
             "id": 1,
-            "date": "2021-04-18T15:11:35.000Z",
+            "date": "2021-03-18T17:11:35+01:00",
             "caller": "2222222",
             "duration": 27
         });
         expect(outboundCalls).that.contains.something.like({
             "id": 2,
-            "date": "2021-04-18T15:11:08.000Z",
+            "date": "2021-03-18T17:11:08+01:00",
             "caller": "33333",
             "duration": 0
         });
@@ -264,19 +263,19 @@ describe("Smart3", () => {
         const inboundCalls = JSON.parse(jsonpath.query(data, "$..[?(@.id == \"calllists.inbound.json\")].value"));
         expect(inboundCalls).that.contains.something.like({
             "id": 0,
-            "date": "2021-05-10T10:36:18.000Z",
+            "date": "2021-04-10T12:36:18+02:00",
             "caller": "Muster, Franz",
             "duration": 75
         });
         expect(inboundCalls).that.contains.something.like({
             "id": 1,
-            "date": "2021-05-06T09:32:54.000Z",
+            "date": "2021-04-06T11:32:54+02:00",
             "caller": "Pumuckl",
             "duration": 44
         });
         expect(inboundCalls).that.contains.something.like({
             "id": 2,
-            "date": "2021-03-26T16:58:31.000Z",
+            "date": "2021-02-26T17:58:31+01:00",
             "caller": "Pumuckl",
             "duration": 126
         });
@@ -409,7 +408,6 @@ describe("W925V", () => {
         expect(hash).to.be.equal(expected);
     });
 });
-
 
 describe("EngineerMenu", () => {
 

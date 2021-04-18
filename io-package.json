@@ -65,10 +65,14 @@
         "connectionType": "local",
         "dataSource": "poll",
         "materialize": true,
+        "globalDependencies": [
+            {
+                "admin": ">=4.0.9"
+            }
+        ],
         "dependencies": [
             {
                 "js-controller": ">=3.0.0",
-                "admin": ">=4.0.9"
             }
         ]
     },
