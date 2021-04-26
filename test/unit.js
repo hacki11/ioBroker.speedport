@@ -223,19 +223,19 @@ describe("Smart3", () => {
         const missedCalls = JSON.parse(jsonpath.query(data, "$..[?(@.id == \"calllists.missed.json\")].value"));
         expect(missedCalls).that.contains.something.like({
             "id": 0,
-            "date": "2021-03-29T10:23:15+02:00",
+            "date": new Date("2021-03-29T10:23:15+02:00").toISOOffsetString(),
             "caller": "666666",
             "called": "777777"
         });
         expect(missedCalls).that.contains.something.like({
             "id": 1,
-            "date": "2021-03-25T12:09:34+01:00",
+            "date": new Date("2021-03-25T12:09:34+01:00").toISOOffsetString(),
             "caller": "222222",
             "called": "777777"
         });
         expect(missedCalls).that.contains.something.like({
             "id": 2,
-            "date": "2021-03-18T17:10:37+01:00",
+            "date": new Date("2021-03-18T17:10:37+01:00").toISOOffsetString(),
             "caller": "Meister Eder",
             "called": "+4911111"
         });
@@ -243,19 +243,19 @@ describe("Smart3", () => {
         const outboundCalls = JSON.parse(jsonpath.query(data, "$..[?(@.id == \"calllists.outbound.json\")].value"));
         expect(outboundCalls).that.contains.something.like({
             "id": 0,
-            "date": "2021-03-21T17:05:17+01:00",
+            "date": new Date("2021-03-21T17:05:17+01:00").toISOOffsetString(),
             "caller": "111111",
             "duration": 34
         });
         expect(outboundCalls).that.contains.something.like({
             "id": 1,
-            "date": "2021-03-18T17:11:35+01:00",
+            "date": new Date("2021-03-18T17:11:35+01:00").toISOOffsetString(),
             "caller": "2222222",
             "duration": 27
         });
         expect(outboundCalls).that.contains.something.like({
             "id": 2,
-            "date": "2021-03-18T17:11:08+01:00",
+            "date": new Date("2021-03-18T17:11:08+01:00").toISOOffsetString(),
             "caller": "33333",
             "duration": 0
         });
@@ -263,19 +263,19 @@ describe("Smart3", () => {
         const inboundCalls = JSON.parse(jsonpath.query(data, "$..[?(@.id == \"calllists.inbound.json\")].value"));
         expect(inboundCalls).that.contains.something.like({
             "id": 0,
-            "date": "2021-04-10T12:36:18+02:00",
+            "date": new Date("2021-04-10T12:36:18+02:00").toISOOffsetString(),
             "caller": "Muster, Franz",
             "duration": 75
         });
         expect(inboundCalls).that.contains.something.like({
             "id": 1,
-            "date": "2021-04-06T11:32:54+02:00",
+            "date": new Date("2021-04-06T11:32:54+02:00").toISOOffsetString(),
             "caller": "Pumuckl",
             "duration": 44
         });
         expect(inboundCalls).that.contains.something.like({
             "id": 2,
-            "date": "2021-02-26T17:58:31+01:00",
+            "date": new Date("2021-02-26T17:58:31+01:00").toISOOffsetString(),
             "caller": "Pumuckl",
             "duration": 126
         });
