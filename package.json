@@ -18,7 +18,7 @@
   "dependencies": {
     "@iobroker/adapter-core": "^2.4.0",
     "axios": "^0.21.1",
-    "axios-cookiejar-support": "^1.0.1",
+    "axios-cookiejar-support": "^2.0.2",
     "qs": "^6.10.1",
     "sjcl": "^1.0.8",
     "tough-cookie": "^4.0.0"
