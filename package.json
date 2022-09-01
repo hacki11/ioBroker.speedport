@@ -21,7 +21,7 @@
     "axios-cookiejar-support": "^1.0.1",
     "qs": "^6.10.1",
     "sjcl": "^1.0.8",
-    "tough-cookie": "^4.0.0"
+    "tough-cookie": "^4.1.2"
   },
   "devDependencies": {
     "@iobroker/testing": "^2.4.4",
