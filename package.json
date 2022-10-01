@@ -16,7 +16,7 @@
     "url": "git+https://github.com/hacki11/ioBroker.speedport.git"
   },
   "dependencies": {
-    "@iobroker/adapter-core": "^2.4.0",
+    "@iobroker/adapter-core": "^2.6.6",
     "axios": "^0.21.1",
     "axios-cookiejar-support": "^1.0.1",
     "qs": "^6.10.1",
