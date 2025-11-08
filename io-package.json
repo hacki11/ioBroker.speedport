@@ -59,6 +59,7 @@
         "extIcon": "https://raw.githubusercontent.com/hacki11/ioBroker.speedport/master/admin/speedport.png",
         "readme": "https://github.com/hacki11/ioBroker.speedport/blob/master/README.md",
         "loglevel": "info",
+        "tier": 2,
         "mode": "daemon",
         "type": "infrastructure",
         "compact": true,
