@@ -30,7 +30,7 @@ Fetches data from Telekom Speedport Router
 ## License
 MIT License
 
-Copyright (c) 2021 hacki11 <jur.schmid@gmail.com>
+Copyright (c) 2021-2025 hacki11 <jur.schmid@gmail.com>
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
