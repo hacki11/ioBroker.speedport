@@ -34,5 +34,13 @@
     "license": "MIT License",
     "ci": "gh-actions",
     "dependabot": "yes",
-    "creatorVersion": "1.32.0"
+    "creatorVersion": "3.1.2",
+    "replay": "/home/hacki/git/ioBroker.speedport/.create-adapter.json",
+    "nodeVersion": "22",
+    "adminUi": "html",
+    "eslintConfig": "official",
+    "i18n": "JSON",
+    "releaseScript": "yes",
+    "devServer": "local",
+    "defaultBranch": "master"
 }

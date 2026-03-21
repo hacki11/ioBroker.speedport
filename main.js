@@ -9,9 +9,8 @@ const W925V = require("./lib/w925v");
 const Smart3 = require("./lib/smart3");
 
 class Speedport extends utils.Adapter {
-
     /**
-     * @param {Partial<utils.AdapterOptions>} [options={}]
+     * @param {Partial<utils.AdapterOptions>} [options]
      */
     constructor(options) {
         super({
@@ -27,12 +26,12 @@ class Speedport extends utils.Adapter {
      * Is called when databases are connected and adapter received configuration.
      */
     async onReady() {
-
         // setup timer
         this.interval = this.config.interval || 60;
         this.interval *= 1000;
-        if (this.interval < 10000)
+        if (this.interval < 10000) {
             this.interval = 10000;
+        }
 
         this.client = this.createClient(this.config.device, this.config.host, this.config.password, this.log);
 
@@ -51,18 +50,19 @@ class Speedport extends utils.Adapter {
             case "SMART3":
                 return new Smart3(host, password, logger);
             default:
-                throw new Error("Could not create instance of device: " + device);
+                throw new Error(`Could not create instance of device: ${device}`);
         }
     }
 
     update() {
-        this.client.login()
+        this.client
+            .login()
             .then(() => this.connectionHandler(true))
             .then(() => this.client.getAll())
             .then(metrics => this.setStates(metrics))
-            .then(() => this.initialized = true)
+            .then(() => (this.initialized = true))
             .then(() => this.client.logout())
-            .catch((error) => this.errorHandler(error))
+            .catch(error => this.errorHandler(error))
             .finally(() => this.refreshTimer());
     }
 
@@ -76,24 +76,26 @@ class Speedport extends utils.Adapter {
             if (!this.initialized || metric.dynamic) {
                 await this.setObjectNotExistsAsync(metric.id, metric.obj);
             }
-            await this.setStateAsync(metric.id, {val: metric.value, ack: true});
+            await this.setStateAsync(metric.id, { val: metric.value, ack: true });
         }
     }
 
     errorHandler(error) {
         this.log.error(error.message);
-        if (error.stack)
+        if (error.stack) {
             this.log.error(error.stack);
+        }
         this.connectionHandler(false);
     }
 
     connectionHandler(connected) {
         if (this.connection !== connected) {
             this.connection = connected;
-            if (connected)
+            if (connected) {
                 this.log.info("Connection established successfully");
-            else
+            } else {
                 this.log.error("Connection failed");
+            }
 
             this.setState("info.connection", this.connection, true);
         }
@@ -101,6 +103,7 @@ class Speedport extends utils.Adapter {
 
     /**
      * Is called when adapter shuts down - callback has to be called under any circumstances!
+     *
      * @param {() => void} callback
      */
     onUnload(callback) {
@@ -119,9 +122,9 @@ class Speedport extends utils.Adapter {
 if (require.main !== module) {
     // Export the constructor in compact mode
     /**
-     * @param {Partial<utils.AdapterOptions>} [options={}]
+     * @param {Partial<utils.AdapterOptions>} [options]
      */
-    module.exports = (options) => new Speedport(options);
+    module.exports = options => new Speedport(options);
 } else {
     // otherwise start the instance directly
     new Speedport();
