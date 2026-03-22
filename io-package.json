@@ -88,13 +88,21 @@
         ],
         "globalDependencies": [
             {
-                "admin": ">=7.0.23"
+                "admin": ">=7.6.20"
             }
         ]
     },
+    "encryptedNative": [
+        "password"
+    ],
+    "protectedNative": [
+        "password"
+    ],
     "native": {
-        "option1": true,
-        "option2": "42"
+        "host": "http://speedport.ip",
+        "password": "",
+        "interval": "60",
+        "device": "W925V"
     },
     "objects": [],
     "instanceObjects": [
