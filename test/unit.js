@@ -221,6 +221,7 @@ describe("Smart3", () => {
         expect(data).that.contains.something.like({id: "calllists.outbound.json"});
 
         const missedCalls = JSON.parse(jsonpath.query(data, "$..[?(@.id == \"calllists.missed.json\")].value"));
+        console.log(missedCalls);
         expect(missedCalls).that.contains.something.like({
             "id": 0,
             "date": new Date("2021-03-29T10:23:15+02:00").toISOOffsetString(),
