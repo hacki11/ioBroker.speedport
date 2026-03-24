@@ -27,7 +27,7 @@ class Speedport extends utils.Adapter {
      */
     async onReady() {
         // setup timer
-        this.interval = this.config.interval || 60;
+        this.interval = Number(this.config.interval) || 60;
         this.interval *= 1000;
         if (this.interval < 10000) {
             this.interval = 10000;
@@ -54,16 +54,25 @@ class Speedport extends utils.Adapter {
         }
     }
 
-    update() {
-        this.client
-            .login()
-            .then(() => this.connectionHandler(true))
-            .then(() => this.client.getAll())
-            .then(metrics => this.setStates(metrics))
-            .then(() => (this.initialized = true))
-            .then(() => this.client.logout())
-            .catch(error => this.errorHandler(error))
-            .finally(() => this.refreshTimer());
+    async update() {
+        if (!this.client) {
+            throw new Error("Client not initialized");
+        }
+
+        const client = this.client;
+
+        try {
+            await client.login();
+            this.connectionHandler(true);
+            const metrics = await client.getAll();
+            await this.setStates(metrics);
+            this.initialized = true;
+            await client.logout();
+        } catch (error) {
+            this.errorHandler(error);
+        } finally {
+            this.refreshTimer();
+        }
     }
 
     refreshTimer() {
