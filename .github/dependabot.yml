@@ -3,10 +3,9 @@ updates:
   - package-ecosystem: npm
     directory: "/"
     schedule:
-      interval: monthly
-      day: 2
-      time: "00:05"
-      timezone: Europe/Berlin
+      interval: cron
+      timezone: "Europe/Berlin"
+      cronjob: "29 3 11 * *"
     open-pull-requests-limit: 5
     assignees:
       - hacki11
@@ -15,10 +14,9 @@ updates:
   - package-ecosystem: github-actions
     directory: "/"
     schedule:
-      interval: monthly
-      day: 2
-      time: "00:05"
-      timezone: Europe/Berlin
+      interval: "cron"
+      timezone: "Europe/Berlin"
+      cronjob: "29 3 11 * *"
     open-pull-requests-limit: 5
     assignees:
       - hacki11
