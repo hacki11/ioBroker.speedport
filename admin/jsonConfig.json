@@ -1,0 +1,58 @@
+{
+    "i18n": true,
+    "type": "panel",
+    "items": {
+        "host": {
+            "type": "text",
+            "label": "Host",
+            "xs": 12,
+            "sm": 12,
+            "md": 6,
+            "lg": 4,
+            "xl": 4,
+            "validator": "!!data.host",
+            "newLine": true
+        },
+        "password": {
+            "type": "password",
+            "label": "Password",
+            "xs": 12,
+            "sm": 12,
+            "md": 6,
+            "lg": 4,
+            "xl": 4,
+            "newLine": true
+        },
+        "interval": {
+            "type": "number",
+            "min": 10,
+            "label": "Interval",
+            "xs": 12,
+            "sm": 12,
+            "md": 6,
+            "lg": 4,
+            "xl": 4,
+            "newLine": true
+        },
+        "device": {
+            "type": "select",
+            "label": "Device",
+            "options": [
+                {
+                    "label": "Speedport W 925V",
+                    "value": "W925V"
+                },
+                {
+                    "label": "Speedport Smart 3",
+                    "value": "SMART3"
+                }
+            ],
+            "xs": 12,
+            "sm": 12,
+            "md": 6,
+            "lg": 4,
+            "xl": 4,
+            "newLine": true
+        }
+    }
+}
