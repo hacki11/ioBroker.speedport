@@ -1,131 +1,144 @@
 {
-    "common": {
-        "name": "speedport",
-        "version": "0.0.3",
-        "news": {
-            "0.0.3": {
-                "en": "* Fixed review findings",
-                "de": "Fixed review findings",
-                "ru": "* Исправлены результаты обзора.",
-                "pt": "* Resultados de revisão corrigidos",
-                "nl": "* Vaste beoordelingsbevindingen",
-                "fr": "* Correction des résultats de l'examen",
-                "it": "* Risolti i risultati della revisione",
-                "es": "* Hallazgos de revisión fijos",
-                "pl": "* Naprawiono ustalenia z przeglądu",
-                "uk": "* Виправлені результати перевірки",
-                "zh-cn": "*修正了审查结果"
-            },
-            "0.0.2": {
-                "en": "initial release",
-                "de": "Erstveröffentlichung",
-                "ru": "Начальная версия",
-                "pt": "lançamento inicial",
-                "nl": "Eerste uitgave",
-                "fr": "Première version",
-                "it": "Versione iniziale",
-                "es": "Versión inicial",
-                "pl": "Pierwsze wydanie",
-                "uk": "Початкова версія",
-                "zh-cn": "首次出版"
-            }
-        },
-        "titleLang": {
-            "en": "Speedport",
-            "de": "Speedport",
-            "ru": "Спидпорт",
-            "pt": "Porto rápido",
-            "nl": "Snelheidspoort",
-            "fr": "Port rapide",
-            "it": "Porto veloce",
-            "es": "Puerto rápido",
-            "pl": "Speedport",
-            "uk": "Speedport",
-            "zh-cn": "高速港"
-        },
-        "desc": {
-            "en": "Fetches data from Telekom Speedport Router",
-            "de": "Ruft Daten vom Telekom Speedport Router ab",
-            "ru": "Получает данные с маршрутизатора Telekom Speedport.",
-            "pt": "Busca dados do Telekom Speedport Router",
-            "nl": "Haalt gegevens op van Telekom Speedport Router",
-            "fr": "Récupère les données du routeur Telekom Speedport",
-            "it": "Recupera i dati da Telekom Speedport Router",
-            "es": "Obtiene datos del enrutador Telekom Speedport",
-            "pl": "Pobiera dane z routera Telekom Speedport",
-            "uk": "Отримує дані з маршрутизатора Telekom Speedport",
-            "zh-cn": "从 Telekom Speedport 路由器获取数据"
-        },
-        "authors": [
-            "hacki11 <jur.schmid@gmail.com>"
-        ],
-        "keywords": [
-            "speedport telekom"
-        ],
-        "licenseInformation": {
-            "type": "free",
-            "license": "MIT"
-        },
-        "platform": "Javascript/Node.js",
-        "icon": "speedport.png",
-        "enabled": true,
-        "extIcon": "https://raw.githubusercontent.com/hacki11/ioBroker.speedport/master/admin/speedport.png",
-        "readme": "https://github.com/hacki11/ioBroker.speedport/blob/master/README.md",
-        "loglevel": "info",
-        "tier": 3,
-        "mode": "daemon",
-        "type": "infrastructure",
-        "compact": true,
-        "connectionType": "local",
-        "dataSource": "poll",
-        "adminUI": {
-            "config": "json"
-        },
-        "dependencies": [
-            {
-                "js-controller": ">=6.0.11"
-            }
-        ],
-        "globalDependencies": [
-            {
-                "admin": ">=7.6.20"
-            }
-        ]
+  "common": {
+    "name": "speedport",
+    "version": "0.1.0",
+    "news": {
+      "0.1.0": {
+        "en": "Maintenance release",
+        "de": "Freigabe der Wartung",
+        "ru": "Освобождение от технического обслуживания",
+        "pt": "Libertação da manutenção",
+        "nl": "Onderhoud",
+        "fr": "Maintenance libérée",
+        "it": "Rilascio manutenzione",
+        "es": "Liberación de mantenimiento",
+        "pl": "Utrzymanie",
+        "uk": "Відеоспостереження",
+        "zh-cn": "维持费释放"
+      },
+      "0.0.3": {
+        "en": "* Fixed review findings",
+        "de": "Fixed review findings",
+        "ru": "* Исправлены результаты обзора.",
+        "pt": "* Resultados de revisão corrigidos",
+        "nl": "* Vaste beoordelingsbevindingen",
+        "fr": "* Correction des résultats de l'examen",
+        "it": "* Risolti i risultati della revisione",
+        "es": "* Hallazgos de revisión fijos",
+        "pl": "* Naprawiono ustalenia z przeglądu",
+        "uk": "* Виправлені результати перевірки",
+        "zh-cn": "*修正了审查结果"
+      },
+      "0.0.2": {
+        "en": "initial release",
+        "de": "Erstveröffentlichung",
+        "ru": "Начальная версия",
+        "pt": "lançamento inicial",
+        "nl": "Eerste uitgave",
+        "fr": "Première version",
+        "it": "Versione iniziale",
+        "es": "Versión inicial",
+        "pl": "Pierwsze wydanie",
+        "uk": "Початкова версія",
+        "zh-cn": "首次出版"
+      }
     },
-    "encryptedNative": [
-        "password"
-    ],
-    "protectedNative": [
-        "password"
-    ],
-    "native": {
-        "host": "http://speedport.ip",
-        "password": "",
-        "interval": "60",
-        "device": "W925V"
+    "titleLang": {
+      "en": "Speedport",
+      "de": "Speedport",
+      "ru": "Спидпорт",
+      "pt": "Porto rápido",
+      "nl": "Snelheidspoort",
+      "fr": "Port rapide",
+      "it": "Porto veloce",
+      "es": "Puerto rápido",
+      "pl": "Speedport",
+      "uk": "Speedport",
+      "zh-cn": "高速港"
     },
-    "objects": [],
-    "instanceObjects": [
-        {
-            "_id": "info",
-            "type": "channel",
-            "common": {
-                "name": "Information"
-            },
-            "native": {}
-        },
-        {
-            "_id": "info.connection",
-            "type": "state",
-            "common": {
-                "role": "indicator.connected",
-                "name": "Device or service connected",
-                "type": "boolean",
-                "read": true,
-                "write": false,
-                "def": false
-            },
-            "native": {}
-        }
+    "desc": {
+      "en": "Fetches data from Telekom Speedport Router",
+      "de": "Ruft Daten vom Telekom Speedport Router ab",
+      "ru": "Получает данные с маршрутизатора Telekom Speedport.",
+      "pt": "Busca dados do Telekom Speedport Router",
+      "nl": "Haalt gegevens op van Telekom Speedport Router",
+      "fr": "Récupère les données du routeur Telekom Speedport",
+      "it": "Recupera i dati da Telekom Speedport Router",
+      "es": "Obtiene datos del enrutador Telekom Speedport",
+      "pl": "Pobiera dane z routera Telekom Speedport",
+      "uk": "Отримує дані з маршрутизатора Telekom Speedport",
+      "zh-cn": "从 Telekom Speedport 路由器获取数据"
+    },
+    "authors": [
+      "hacki11 <jur.schmid@gmail.com>"
+    ],
+    "keywords": [
+      "speedport telekom"
+    ],
+    "licenseInformation": {
+      "type": "free",
+      "license": "MIT"
+    },
+    "platform": "Javascript/Node.js",
+    "icon": "speedport.png",
+    "enabled": true,
+    "extIcon": "https://raw.githubusercontent.com/hacki11/ioBroker.speedport/master/admin/speedport.png",
+    "readme": "https://github.com/hacki11/ioBroker.speedport/blob/master/README.md",
+    "loglevel": "info",
+    "tier": 3,
+    "mode": "daemon",
+    "type": "infrastructure",
+    "compact": true,
+    "connectionType": "local",
+    "dataSource": "poll",
+    "adminUI": {
+      "config": "json"
+    },
+    "dependencies": [
+      {
+        "js-controller": ">=6.0.11"
+      }
+    ],
+    "globalDependencies": [
+      {
+        "admin": ">=7.6.20"
+      }
     ]
+  },
+  "encryptedNative": [
+    "password"
+  ],
+  "protectedNative": [
+    "password"
+  ],
+  "native": {
+    "host": "http://speedport.ip",
+    "password": "",
+    "interval": "60",
+    "device": "W925V"
+  },
+  "objects": [],
+  "instanceObjects": [
+    {
+      "_id": "info",
+      "type": "channel",
+      "common": {
+        "name": "Information"
+      },
+      "native": {}
+    },
+    {
+      "_id": "info.connection",
+      "type": "state",
+      "common": {
+        "role": "indicator.connected",
+        "name": "Device or service connected",
+        "type": "boolean",
+        "read": true,
+        "write": false,
+        "def": false
+      },
+      "native": {}
+    }
+  ]
 }

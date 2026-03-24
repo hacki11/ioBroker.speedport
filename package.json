@@ -1,10 +1,10 @@
 {
   "name": "iobroker.speedport",
-  "version": "0.0.3",
+  "version": "0.1.0",
   "description": "Fetches data from Telekom Speedport Router",
   "author": {
     "name": "hacki11",
-    "email": "jur.schmid@gmail.com"
+    "email": "hacko@mailbox.org"
   },
   "contributors": [],
   "homepage": "https://github.com/hacki11/ioBroker.speedport",
