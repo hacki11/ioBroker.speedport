@@ -31,7 +31,7 @@
     "axios-cookiejar-support": "^6.0.5",
     "qs": "^6.15.3",
     "sjcl": "^1.0.8",
-    "tough-cookie": "^6.0.1"
+    "tough-cookie": "^6.0.2"
   },
   "devDependencies": {
     "@alcalzone/release-script": "^5.2.1",
