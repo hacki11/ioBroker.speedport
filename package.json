@@ -29,7 +29,7 @@
     "@iobroker/adapter-core": "^3.3.2",
     "axios": "^1.13.6",
     "axios-cookiejar-support": "^6.0.5",
-    "qs": "^6.15.3",
+    "qs": "^6.16.0",
     "sjcl": "^1.0.8",
     "tough-cookie": "^6.0.2"
   },
